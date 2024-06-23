@@ -1,0 +1,292 @@
+You are a math expert and familar with Lean 3 formal language. Now please translate the following statement and solution of a math word problem into Lean 3 formal solution. Given a informal problem and its informal solution, analyze the mathematical problem and gain an in-depth understanding of the informal solution, then generate the corresponding formal solution in Lean 3. You should output the code in the ```lean xxx ``` tag. Please note that the informal solution and the formal solution need to be identical and the formal solution should be able to pass the Lean 3 compiler.
+Here are some examples you can refer to:
+# Problem:
+A high school is holding a charity event and different classes are asked to contribute. The contribution from each class is proportional to the number of students in the class. Class A with 30 students contributed $1500, Class B with 40 students contributed $2000, and Class C with 50 students contributed $2500. 
+
+After the event, the total amount raised was divided among four local charities: Charity X, Charity Y, Charity Z, and Charity W. The distribution of the funds was represented in a two-way table, where the rows represent the classes and the columns represent the charities. 
+
+|           | Charity X | Charity Y | Charity Z | Charity W | Total |
+|-----------|-----------|-----------|-----------|-----------|-------|
+| Class A   | $300      | $400      | $500      | $300      | $1500 |
+| Class B   | $400      | $600      | $600      | $400      | $2000 |
+| Class C   | $500      | $700      | $800      | $500      | $2500 |
+| Total     | $1200     | $1700     | $1900     | $1200     | $6000 |
+
+Given this information, find the polynomial that represents the relationship between the number of students in a class and the amount of money contributed by that class. Also, find the amount of money that would be contributed by a class with 60 students.
+# Solution:
+To find the polynomial that represents the relationship between the number of students in a class and the amount of money contributed by that class, we need to first determine the rate of contribution per student. 
+
+We can do this by dividing the total contribution of each class by the number of students in that class. For example, Class A with 30 students contributed $1500, so the contribution per student in Class A is $1500 / 30 = $50. Similarly, the contribution per student in Class B is $2000 / 40 = $50, and the contribution per student in Class C is $2500 / 50 = $50.
+
+This means that the rate of contribution per student is constant across all classes and is equal to $50 per student.
+
+So, the polynomial that represents the relationship between the number of students in a class (n) and the amount of money contributed by that class is P(n) = 50n.
+
+Now, to find the amount of money that would be contributed by a class with 60 students, we substitute n = 60 into the polynomial: P(n) = 50 * 60 = $3000.
+
+Therefore, a class with 60 students would contribute $3000 to the charity event.
+# Formal solution in Lean 3:
+```lean
+import data.real.basic
+
+-- Denote the number of students in a class as `n` and the amount of money contributed by that class as `P n`.
+def P (n : ℝ) := 50 * n
+
+-- Prove that the rate of contribution per student is constant across all classes and is equal to $50 per student.
+example : (P 30 = 1500) ∧ (P 40 = 2000) ∧ (P 50 = 2500) :=
+begin
+  split,
+  { -- the contribution per student in Class A is $1500 / 30 = $50
+    unfold P,
+    norm_num },
+  split,
+  { -- the contribution per student in Class B is $2000 / 40 = $50
+    unfold P,
+    norm_num },
+  { -- the contribution per student in Class C is $2500 / 50 = $50
+    unfold P,
+    norm_num }
+end
+
+-- Prove that a class with 60 students would contribute $3000 to the charity event.
+example : P 60 = 3000 :=
+begin
+  -- substitute n = 60 into the polynomial: P(n) = 50 * 60 = $3000
+  unfold P,
+  norm_num
+end
+```
+---
+# Problem:
+A farmer has a plot of land near a river. The farmer wishes to create a rectangular field by fencing off a section of the land, using the river as one of the sides. The farmer has 600 meters of fencing available. 
+
+The farmer wants to maximize the area of the field. To achieve this, the farmer has decided to use a function of the form `A(x) = x * f(x)`, where `x` is the width of the field and `f(x)` is the length of the field. 
+
+The farmer knows that the maximum area will be achieved when the derivative of the area function is zero, so the farmer decides to use the derivative `A'(x) = f(x) - x * f'(x)`. 
+
+The farmer also knows that the area will be maximum when `sin(x) = cos(x)`, which is a trigonometric identity. 
+
+Given that `f(x) = 600 - 2x` and `f'(x) = -2`, find the dimensions that will maximize the area of the field.
+# Solution:
+First, let's use the given identity `sin(x) = cos(x)`. The solutions to this equation are when `x = π/4 + nπ`, where `n` is an integer. But as `x` represents the width of the field, it must be positive. So, the only possible value for `x` is `x = π/4`.
+
+Now, let's find the derivative of `A(x) = x * f(x)`, which is `A'(x) = f(x) - x * f'(x)`, where `f(x) = 600 - 2x` and `f'(x) = -2`.
+
+Substituting `f(x)` and `f'(x)` into `A'(x)`, we get `A'(x) = 600 - 2x - x * (-2) = 600`.
+
+Setting `A'(x) = 0` gives `600 = 0`, which is not possible. It seems that we made an error in our calculation. The correct derivative of `A(x) = x * f(x)` is `A'(x) = f(x) + x * f'(x)`.
+
+Substituting `f(x)` and `f'(x)` into the correct `A'(x)`, we get `A'(x) = 600 - 2x - x * (-2) = 600 - 2x + 2x = 600`.
+
+Setting `A'(x) = 0` still gives `600 = 0`, which is not possible. It seems that the maximum area cannot be found using the derivative. We must have misunderstood the problem.
+
+The problem states that the farmer has 600 meters of fencing available, and the farmer is using the river as one of the sides of the field. So, the total length of the other three sides is 600 meters. If the width of the field is `x`, then the length of the field is `600 - 2x`.
+
+The area of the field is `A(x) = x * (600 - 2x)`. The derivative of this function is `A'(x) = 600 - 4x`, which is zero when `x = 150`. 
+
+So, the dimensions that will maximize the area of the field are a width of 150 meters and a length of 300 meters.
+# Formal solution in Lean 3:
+```lean
+import data.real.basic
+
+open real
+
+-- The function for the area of the field
+def A (x : ℝ) := x * (600 - 2*x)
+
+-- The derivative of the area function
+def A' (x : ℝ) := 600 - 4*x
+
+-- Proof that the derivative is zero when x = 150
+lemma derivative_zero_at_150 : A' 150 = 0 :=
+begin
+  unfold A',
+  norm_num,
+end
+
+-- Proof that the dimensions that maximize the area are x = 150 and y = 300
+lemma max_area_dimensions : A 150 = 150 * 300 :=
+begin
+  unfold A,
+  norm_num,
+end
+```
+---
+# Problem:
+In a high school, there are two groups of students, Group A and Group B. There are 50 students in Group A and 60 students in Group B. Group A students are given rectangular prisms with the length of 4cm, the width of 3cm, and the height of 3cm to calculate the volume, and Group B students are given cubes with the side length of 3cm to calculate the volume. The average errors of volume calculations for Group A and Group B are 2.5cc and 2.2cc, respectively, and the standard deviations are 0.3cc and 0.5cc, respectively.
+
+Is there a significant difference in the accuracy of volume calculation between the two groups? Use a two-tailed t-test with a 5% significance level to determine.
+# Solution:
+First, we need to calculate the volumes of the rectangular prism and the cube. The volume of the rectangular prism is length * width * height = 4cm * 3cm * 3cm = 36 cubic cm. The volume of the cube is side length^3 = 3cm^3 = 27 cubic cm. 
+
+Next, we need to calculate the t-value for the two-sample t-test. The formula for the t-value is:
+
+t = (Mean1 - Mean2) / sqrt [(s1^2/n1) + (s2^2/n2)]
+
+where:
+Mean1 and Mean2 are the means of the two samples,
+s1 and s2 are the standard deviations of the two samples,
+n1 and n2 are the sizes of the two samples.
+
+Substituting the values into the formula, we get:
+
+t = (2.5cc - 2.2cc) / sqrt [(0.3cc^2/50) + (0.5cc^2/60)] 
+t = 0.3cc / sqrt [(0.09cc/50) + (0.25cc/60)]
+t = 0.3cc / sqrt [0.0018cc + 0.00417cc]
+t = 0.3cc / sqrt [0.00597cc]
+t = 0.3cc / 0.07728cc
+t = 3.88
+
+Then, we need to find the critical t-value for a two-tailed t-test with a 5% significance level and degrees of freedom = n1 + n2 - 2 = 50 + 60 - 2 = 108. From the t-distribution table, the critical t-value is approximately 1.98.
+
+Since the calculated t-value (3.88) is greater than the critical t-value (1.98), we reject the null hypothesis that there is no significant difference in the accuracy of volume calculation between the two groups. Therefore, there is a significant difference in the accuracy of volume calculation between Group A and Group B.
+# Formal solution in Lean 3:
+```lean
+-- Formal proof in Lean 3 is not applicable for this problem. The problem involves statistical methods and calculations that are not supported by Lean 3. Lean 3 is a theorem prover for pure mathematics, and it does not support empirical computations and statistical tests.
+```
+---
+# Problem:
+A group of high school students are conducting a survey on the daily screen time of students in their school. They hypothesize that the average screen time follows a normal distribution. They randomly select 100 students and record their screen time in hours. The data shows an average screen time of 6 hours with a standard deviation of 1.5 hours.
+
+Now, they want to study the proportion of students who use screens for more than 8 hours per day. To do this, they need to evaluate the area under the normal distribution curve from 8 hours to infinity. In mathematics, this area is obtained by integrating the normal distribution function from the given point (8 hours in this case) to infinity.
+
+The probability density function of a normal distribution is given by:
+
+f(x) = (1/√(2πσ²)) * e^(-((x-μ)²/2σ²))
+
+where μ is the mean (6 hours) and σ is the standard deviation (1.5 hours).
+
+Can you calculate the integral ∫ from 8 to ∞ of f(x) dx?
+# Solution:
+The integral of a function represents the area under the curve of the function. In this case, we want to calculate the area under the normal distribution curve from 8 to infinity, which will give us the proportion of students who use screens for more than 8 hours per day.
+
+We first standardize the distribution by subtracting the mean and dividing by the standard deviation. This means we will be integrating the standard normal distribution starting from (8-6)/1.5 = 1.33 to infinity.
+
+The integral of the standard normal distribution from a to b is given by Φ(b) - Φ(a), where Φ is the cumulative distribution function of the standard normal distribution. Since we are going to infinity, Φ(∞) = 1. Thus, the integral becomes 1 - Φ(1.33).
+
+The value of Φ(1.33) can be looked up in a standard normal distribution table or calculated using a calculator. The typical value is 0.907.
+
+So, the integral becomes 1 - 0.907 = 0.093.
+
+Therefore, approximately 9.3% of students use screens for more than 8 hours per day.
+# Formal solution in Lean 3:
+```lean
+-- Lean 3 does not currently support numerical computations involving complex numbers or real numbers, 
+-- so it is not possible to compute this integral directly in Lean 3. The informal proof outlines the 
+-- traditional approach to computing this probability using the properties of the standard normal distribution.
+```
+---
+# Problem:
+A student is studying the relationship between the number of hours studying per week and the final exam scores of high school students. He models the relationship with a linear regression and finds that for every additional hour studied, the score increases by 2 points. The standard error of the slope is 0.5. 
+The student wonders whether his finding is statistically significant. He decides to use a 95% confidence interval to determine if the slope of the regression line is significantly different from zero. Use the concept of derivatives to find the confidence interval for the slope, and determine whether the slope is significantly different from zero.
+# Solution:
+The student is trying to determine whether the slope of his linear regression is significantly different from zero. In this case, the slope represents the change in exam scores for each additional hour studied.
+
+A 95% confidence interval for the slope of a regression line can be calculated using the formula: slope ± (t-value * standard error), where the t-value for a 95% confidence interval with a large sample size is approximately 1.96.
+
+In this case, the slope is 2 and the standard error is 0.5. Thus, the 95% confidence interval for the slope is 2 ± (1.96 * 0.5). This results in a confidence interval of (2 - 0.98, 2 + 0.98), or (1.02, 2.98).
+
+Because this confidence interval does not include zero, we can conclude that there is a statistically significant relationship between the number of hours studied and the final exam score. In other words, the increase in exam scores for each additional hour studied is significantly different from zero. 
+
+The concept of derivatives comes into play because the slope of the regression line represents the rate of change of the exam scores with respect to the number of hours studied, which is a derivative. In this case, the derivative is significantly different from zero, indicating that there is a significant rate of change.
+# Formal solution in Lean 3:
+```lean
+-- Lean 3 does not have a built-in library for statistics. Therefore, formal proof for this problem cannot be provided in Lean 3.
+```
+---
+# Problem:
+Consider a city with 4 neighborhoods: A, B, C, and D. The city council has decided to install new electric charging stations in all of these neighborhoods. However, due to budget constraints, they can only install one charging station in each neighborhood. The city council has 4 different types of charging stations to choose from, each represented by a different complex number: 4+3i, 2+5i, 7+2i, and 3+4i.
+
+The council wants to avoid installing the same type of charging station in two adjacent neighborhoods, where neighborhood A is adjacent to B and D, B is adjacent to A and C, C is adjacent to B and D, and D is adjacent to A and C. 
+
+In how many ways can the city council choose the type of charging station for each neighborhood such that no two adjacent neighborhoods have the same type of charging station?
+# Solution:
+We can use the principles of combinatorics to solve this problem. One way to approach this is to first consider the total number of ways to assign the charging stations without any restrictions. Since there are 4 types of charging stations and 4 neighborhoods, this would be 4^4 = 256 ways.
+
+However, we need to subtract out the cases where the same type of charging station is installed in two adjacent neighborhoods. 
+
+Let's consider neighborhood A. There are 3 ways to choose a charging station for A such that it is different from B and D (since there are 4 types of charging stations in total). Similarly, there are 3 ways to choose a charging station for B such that it is different from A and C, 3 ways for C, and 3 ways for D. 
+
+However, this overcounts the cases where the same type of charging station is installed in all four neighborhoods. There are 4 ways to do this (one for each type of charging station). 
+
+So, the total number of ways to assign the charging stations such that no two adjacent neighborhoods have the same type of charging station is 256 - 3*4 + 4 = 248 ways.
+# Formal solution in Lean 3:
+```lean
+import data.nat.basic
+import data.complex.basic
+
+open nat
+
+-- defining the number of neighborhoods and the number of charging station types
+def num_neighborhoods : ℕ := 4
+def num_charging_stations : ℕ := 4
+
+-- calculating the total number of ways to assign the charging stations without any restrictions
+def total_ways : ℕ := pow num_charging_stations num_neighborhoods
+
+-- calculating the number of ways to assign the same charging station to two adjacent neighborhoods
+def same_station_ways : ℕ := 3 * num_neighborhoods
+
+-- calculating the number of ways to assign the same charging station to all neighborhoods
+def all_same_station_ways : ℕ := num_charging_stations
+
+-- calculating the number of ways to assign the charging stations such that no two adjacent neighborhoods have the same charging station
+def required_ways : ℕ := total_ways - same_station_ways + all_same_station_ways
+
+-- proof that the number of required ways is 248
+example : required_ways = 248 :=
+begin
+  unfold required_ways,
+  unfold total_ways,
+  unfold same_station_ways,
+  unfold all_same_station_ways,
+  exact dec_trivial,
+end
+```
+---
+# Problem:
+A biologist is studying the population growth of a certain species of bacteria. He notices that the rate of growth of the bacteria population is proportional to the current population. Initially, there are 100 bacteria. After 3 hours, the population has grown to 800. 
+
+1) Find the constant of proportionality (k) in the differential equation dp/dt = kp, where p(t) is the bacteria population at time t.
+
+2) Assuming the population growth continues in this manner, what would be the bacteria population after 5 hours?
+
+3) The biologist also needs to analyze the sample distribution of the bacteria population after 5 hours. He randomly selects 100 samples. The mean of the population is μ and the standard deviation is σ. He wants to apply the Central Limit Theorem. What would be the mean and standard deviation for the sample distribution?
+# Solution:
+1) To find the constant of proportionality (k), we need to solve the differential equation dp/dt = kp, with the initial condition p(0) = 100 and p(3) = 800. The solution to this differential equation is p(t) = p(0)*e^(kt), where e is the base of the natural logarithm. Thus, 800 = 100*e^(3k). Solving for k, we get k = ln(8)/3 ≈ 0.6931.
+
+2) To find the bacteria population after 5 hours, we use the formula p(t) = p(0)*e^(kt). Substituting p(0) = 100, k = 0.6931, and t = 5, we get p(5) = 100*e^(0.6931*5) ≈ 2964. 
+
+3) According to the Central Limit Theorem, the mean of the sample distribution is equal to the mean of the population (μ). Therefore, the mean of the sample distribution is the same as the bacteria population after 5 hours, which is 2964. 
+
+The standard deviation of the sample distribution is the standard deviation of the population (σ) divided by the square root of the sample size (n). However, we are not given the standard deviation of the population. If it were given, then we could calculate the standard deviation of the sample distribution.
+# Formal solution in Lean 3:
+```lean
+-- Lean doesn't have built-in support for differential equations or statistical concepts like sampling distributions and the Central Limit Theorem. Therefore, a formal proof in Lean cannot be provided. The informal proof provided above should be sufficient in this case.
+```
+---
+# Problem:
+Consider a rectangle ABCD where AB = BC = 5 units and AD = 10 units. Point E is the midpoint of AB and point F is the midpoint of BC. Let's take a transformation that reflects rectangle ABCD over line EF. Let's denote the image of the rectangle after the reflection as A'B'C'D'. Prove that A'B'C'D' is congruent to ABCD.
+# Solution:
+Firstly, we know that a rectangle is a parallelogram with all angles equal to 90 degrees. This means that all properties of parallelograms apply to rectangles as well, including the property that opposite sides are equal in length. 
+
+Now, let's consider the reflection over line EF. In a reflection, each point of the original figure has an image point in the reflected figure that is the same distance from the line of reflection, but on the opposite side. 
+
+This means that the distances from A to E, and from E to A' are equal, and similarly the distances from B to F and from F to B' are equal. 
+This implies that AA' = BB' = 2 times the length of AE (or BF), which is 2*2.5 = 5 units (since E and F are midpoints). 
+
+Similarly, we can argue that CC' and DD' are also 5 units long. 
+
+Now, since the line of reflection EF is the line joining the midpoints of AB and BC, it is parallel to both AD and DC, and is half their length. After the reflection, EF will become the line joining the midpoints of A'B' and B'C', which is parallel to both A'D' and D'C', and is half their length. This implies that A'D' = DC = 10 units and D'C' = AD = 10 units.
+
+Hence, we have shown that A'B' = AB, B'C' = BC, C'D' = CD and D'A' = DA, and all angles in A'B'C'D' are 90 degrees (since they are image angles of the 90-degree angles in ABCD after the reflection). 
+
+Therefore, rectangle A'B'C'D' is congruent to rectangle ABCD by the definition of congruence (all corresponding sides and angles are equal).
+# Formal solution in Lean 3:
+```lean
+-- Lean does not currently support formal reasoning about geometry in a direct way. 
+-- Proofs about geometric figures, like the one in this problem, are typically done using informal reasoning, 
+-- as in the Informal Proof section. A formal proof in Lean would require developing a significant amount of 
+-- geometric theory, which is beyond the scope of this example. 
+```
+---

@@ -1,0 +1,202 @@
+[
+    {
+        "name": "correct_by_msg__ELEM_word_problem_1st_grade_766_round2",
+        "formal_proof": "import data.real.basic\n\n-- Defining the length and width of the garden\ndef garden_length : \u211d := 6\ndef garden_width : \u211d := 4\n\n-- Defining the formula for the perimeter of a rectangle\ndef perimeter (length width : \u211d) : \u211d := 2 * (length + width)\n\n-- Calculating the amount of fencing needed\n#eval perimeter garden_length garden_width  -- This returns 20"
+    },
+    {
+        "name": "correct_by_msg__HEDU_word_problem_College_Algebra_678_round0",
+        "formal_proof": "import data.real.basic\n\n-- define the polynomial function\ndef P (x : \u211d) : \u211d := 3*x^4 - 2*x^3 + x^2 - 5*x + 9\n\n-- prove that P(2) = 35\nexample : P 2 = 35 :=\nbegin\n  -- unfold the definition of P\n  unfold P,\n  -- simplify the expression to 35\n  norm_num,\nend"
+    },
+    {
+        "name": "new_step_formalans_kwgiven__HIGH_theorem_proving_Algebra_2_182",
+        "formal_proof": "import data.real.basic\n\n-- let's define the functions for cost and revenue\ndef C (n : \u211d) := 5000 + 50*n\ndef R (n : \u211d) := 75*n\n\n-- we'll show that the break-even point occurs at n = 200\nexample : C 200 = R 200 :=\nbegin\n  unfold C, -- replace C with its definition\n  unfold R, -- replace R with its definition\n  norm_num, -- simplify the numerical computation\nend"
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_4th_grade_741_round1",
+        "formal_proof": "def total_balls (red blue green : \u2115) : \u2115 := red + blue + green\ndef removed_balls (red blue green : \u2115) : \u2115 := red + blue + green\ndef remaining_balls (total removed : \u2115) : \u2115 := total - removed\n\n#eval total_balls 27 35 21\n#eval removed_balls 14 6 10\n#eval remaining_balls (total_balls 27 35 21) (removed_balls 14 6 10)"
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_5th_grade_419_round1",
+        "formal_proof": "import data.rat.basic\nimport tactic.norm_num\n\nopen rat\n\nexample : (21/4 : \u211a) + (5/2 : \u211a) = 31/4 :=\nbegin\n  norm_num,\nend"
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_3rd_grade_657_round1",
+        "formal_proof": "open int \n\n-- define the money john has originally\ndef john_money_orig : int := 5\n\n-- define the money john spent at the bookstore\ndef john_money_spent : int := 20\n\n-- calculate the money john has now\ndef john_money_now : int := john_money_orig - john_money_spent\n\n#eval john_money_now -- the output should be -15"
+    },
+    {
+        "name": "correct_by_msg__HEDU_word_problem_Linear_algebra_501_round1",
+        "formal_proof": "import data.real.basic\n\n-- the standard (x, y) coordinate system\ndef f (x : \u211d) := x^2\n\n-- the new coordinate system (u, v), where u = x^2\ndef g (u : \u211d) := u\n\n-- the definite integral from 0 to 1 in the standard calculus\ndef integral_f := (1 / 3) * (1 ^ 3 - 0 ^ 3)\n\n-- the definite integral from 0 to 1 in the new coordinate system\ndef integral_g := (1 / 2) * (1 ^ 2 - 0 ^ 2)\n\ntheorem integral_transform : integral_f = integral_g :=\nbegin\n    unfold integral_f integral_g f g,\n    norm_num,\nend"
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_1st_grade_184_round1",
+        "formal_proof": "import data.real.basic\n\n-- defining the parameters\ndef length := (5 : \u211d)\ndef width := (3 : \u211d)\n\n-- defining the formula for the perimeter of a rectangle\ndef rectangle_perimeter (length width : \u211d) := 2*(length + width)\n\n-- substituting the values into the formula and proving the result\nexample : rectangle_perimeter length width = 16 :=\nbegin\n  unfold rectangle_perimeter,\n  rw [length, width],\n  norm_num,\nend"
+    },
+    {
+        "name": "correct_by_msg__HEDU_word_problem_AP_College_Calculus_BC_824_round0",
+        "formal_proof": "import data.real.basic\nimport tactic\n\nopen real\n\n-- define the function and its derivative\ndef f (x : \u211d) := 3*x^2 - 2*x + 1\ndef df (x : \u211d) := 6*x - 2\n\n-- prove that the derivative at point x=2 is 10\nexample : df 2 = 10 :=\nbegin\n  unfold df,\n  norm_num,\nend"
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_4th_grade_783_round1",
+        "formal_proof": "import data.real.basic\n\nopen_locale classical\n\n-- We first define the fractions 1/2 and 1/4.\nnoncomputable def half : \u211d := 1/2\nnoncomputable def quarter : \u211d := 1/4\n\n-- We then state and prove the result.\ntheorem john_pizza : half - quarter = quarter :=\nbegin\n  unfold half quarter, -- This replaces 'half' and 'quarter' with their definitions.\n  norm_num, -- This performs the subtraction.\nend"
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_4th_grade_230_round1",
+        "formal_proof": "import data.real.basic\n\nnoncomputable def dollars_in_pocket : \u211d := 3.4\nnoncomputable def dollars_spent : \u211d := 2.5\nnoncomputable def dollars_left : \u211d := dollars_in_pocket - dollars_spent\n\nexample : dollars_left = 0.9 :=\nbegin\n  unfold dollars_left,\n  unfold dollars_in_pocket,\n  unfold dollars_spent,\n  norm_num,\nend"
+    },
+    {
+        "name": "new_step_formalans_kwgiven__MIDD_theorem_proving_Algebra_basics_452",
+        "formal_proof": "import data.real.basic\n\ndef calculate_perimeter (length : \u211d) (width : \u211d) : \u211d := \n2 * (length + width)\n\ndef calculate_total_cost (perimeter : \u211d) (cost_per_meter : \u211d) : \u211d := \nperimeter * cost_per_meter\n\nexample : calculate_total_cost (calculate_perimeter 15 10) 5 = 250 :=\nbegin\n  unfold calculate_total_cost,\n  unfold calculate_perimeter,\n  norm_num,\nend"
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_8th_grade_518_round0",
+        "formal_proof": "import data.real.basic\n\n-- definition of variables\ndef pies_per_bakery_per_day := 100\ndef bakeries := 4\ndef days_per_week := 7\n\n-- calculation\ndef total_pies := pies_per_bakery_per_day * bakeries * days_per_week\n\n-- proof\nexample : total_pies = 2800 :=\nbegin\n  unfold total_pies,\n  unfold pies_per_bakery_per_day,\n  unfold bakeries,\n  unfold days_per_week,\n  norm_num,\nend"
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_8th_grade_561_round1",
+        "formal_proof": "import data.int.basic\n\n-- First, declare the variables and the assumptions\ndef fence_cost_per_meter := 5\ndef length := 15\ndef width := 7\ndef perimeter := 2 * (length + width)\n\n-- Then, define the function to calculate the cost of the fence\ndef fence_cost (perimeter : \u2115) (fence_cost_per_meter : \u2115) : \u2115 := perimeter * fence_cost_per_meter\n\n-- Finally, evaluate the function with the given values\n#eval fence_cost perimeter fence_cost_per_meter\n-- This will return 220, which is the correct answer."
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_1st_grade_385_round1",
+        "formal_proof": "import data.real.basic\n\ntheorem add_neg_new : \u2200 (x y : \u211d), x < 0 \u2192 y > 0 \u2192 x + y < y :=\nbegin\n  intros x y h1 h2,\n  linarith,\nend"
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_2nd_grade_880_round1",
+        "formal_proof": "import data.real.basic\n\n-- definition of perimeter of rectangle\ndef perimeter (length width : \u211d) : \u211d := 2 * (length + width)\n\n-- definition of area of rectangle\ndef area (length width : \u211d) : \u211d := length * width\n\n-- given values\ndef garden_length : \u211d := 5\ndef garden_width : \u211d := 3\n\n-- calculate perimeter\n#eval perimeter garden_length garden_width\n-- returns 16\n\n-- calculate area\n#eval area garden_length garden_width\n-- returns 15"
+    },
+    {
+        "name": "new_step_formalans_kwgiven__ELEM_theorem_proving_3rd_grade_60",
+        "formal_proof": "import data.real.basic\n\n-- We first define what it means for a quadrilateral ABCD to be a parallelogram.\n-- A parallelogram is a quadrilateral with opposite sides of equal length.\ndef is_parallelogram (AB : \u211d) (BC : \u211d) (CD : \u211d) (DA : \u211d) : Prop := AB = CD \u2227 BC = DA\n\n-- We then prove that if a quadrilateral has opposite sides of equal length, then it is a parallelogram.\ntheorem quadrilateral_is_parallelogram (AB : \u211d) (BC : \u211d) (CD : \u211d) (DA : \u211d) (h : AB = CD \u2227 BC = DA) : is_parallelogram AB BC CD DA := \nbegin\n  -- Unpack the hypothesis that the opposite sides of the quadrilateral are of equal length.\n  cases h with h1 h2,\n  -- Since the opposite sides of the quadrilateral are of equal length, by definition, the quadrilateral is a parallelogram.\n  exact \u27e8h1, h2\u27e9,\nend"
+    },
+    {
+        "name": "correct_by_msg__HIGH_word_problem_Algebra_2_574_round1",
+        "formal_proof": "import data.real.basic\n\n-- Here we define the measures of the angles\ndef angle_BAC : \u211d := 35\ndef angle_ABC : \u211d := 75\ndef angle_BCA : \u211d := 180 - (angle_BAC + angle_ABC)\n\n-- Here we prove that the measure of angle BCA is 70\nexample : angle_BCA = 70 :=\nbegin\n  unfold angle_BCA, -- This replaces `angle_BCA` with its definition\n  unfold angle_BAC, -- This replaces `angle_BAC` with its definition\n  unfold angle_ABC, -- This replaces `angle_ABC` with its definition\n  norm_num, -- This simplifies numerical calculations\nend"
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_4th_grade_590_round0",
+        "formal_proof": "def rectangle_area (length width : \u2115) : \u2115 := length * width\ndef square_area (side : \u2115) : \u2115 := side * side\n\ndef poster_not_covered (rectangle_length rectangle_width square_side : \u2115) : \u2115 :=\nrectangle_area rectangle_length rectangle_width - square_area square_side\n\nexample : poster_not_covered 10 8 5 = 55 :=\nbegin\nrw poster_not_covered,\nrw rectangle_area,\nrw square_area,\nexact dec_trivial,\nend"
+    },
+    {
+        "name": "new_step_formalans_kwgiven__MIDD_theorem_proving_Pre-algebra_295",
+        "formal_proof": "import data.real.basic\n\nexample : \u2200 x : \u211d, 3*x - 7 + 2*x = 21 + x \u2192 x = 7 :=\nbegin\n  intros,\n  linarith,\nend"
+    },
+    {
+        "name": "correct_by_msg__word_problem_2nd_grade_52_round1",
+        "formal_proof": "open nat\n\n-- Define the number of seashells Alice and Bob collected in the morning and the afternoon\ndef Alice_morning := 7\ndef Alice_afternoon := 8\ndef Bob_morning := 12\ndef Bob_afternoon := 5\n\n-- Calculate the total number of seashells Alice and Bob collected by the end of the day\ndef Alice_total := Alice_morning + Alice_afternoon -- Alice has 15 seashells\ndef Bob_total := Bob_morning - Bob_afternoon -- Bob has 7 seashells\n\n-- The total number of seashells Alice and Bob have at the end of the day\ndef total_seashells := Alice_total + Bob_total\n\n-- Verify that the total number of seashells Alice and Bob have is 22\nexample : total_seashells = 22 :=\nbegin\n  unfold total_seashells, -- Replace total_seashells with its definition\n  unfold Alice_total, -- Replace Alice_total with its definition\n  unfold Bob_total, -- Replace Bob_total with its definition\n  refl, -- The goal is now 22 = 22, which is true by reflexivity\nend"
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Pre-algebra_624_round0",
+        "formal_proof": "import data.real.basic\n\n-- Proof\nexample : \u2203 x : \u211d, x - 30 + 50 = 120 := \nbegin\n  use 100,\n  norm_num,\nend"
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_Basic geometry and measurement_238_round1",
+        "formal_proof": "import data.real.basic\n\n-- Let's define the rectangle as a structure with length and width\nstructure rectangle :=\n(length : \u211d)\n(width : \u211d)\n\n-- Let's define a function to calculate the area of a rectangle\ndef area (r : rectangle) : \u211d :=\nr.length * r.width\n\n-- Let's define a function for the scale transformation of a rectangle\ndef scale (r : rectangle) (factor : \u211d) : rectangle :=\n{ length := r.length * factor, \n  width := r.width * factor }\n\n-- The main theorem\ntheorem scale_doubles_area (r : rectangle) (factor : \u211d) : \n  area (scale r factor) = factor^2 * area r :=\nbegin\n  -- Expanding the definition of area for both sides\n  unfold area,\n  unfold scale,\n  -- The result follows from simple arithmetic\n  ring,\nend\n\n-- Let's test our theorem with the given values\ndef my_rectangle : rectangle := { length := 4, width := 2 }\ndef my_scaled_rectangle : rectangle := scale my_rectangle 2\n#eval area my_scaled_rectangle -- It should return '32'"
+    },
+    {
+        "name": "new_step_formalans_kwgiven__theorem_proving_5th_grade_127",
+        "formal_proof": "import data.real.basic\n\n-- definition of the problem\ndef problem := \u03bb x y : \u211d, (x * 10^2) + (y * 10^2)\n\n-- proof of the problem\nexample : problem 0.2 0.4 = 60 :=\nbegin\n  unfold problem, -- unfolding the definition of problem\n  norm_num,       -- simplifying the numbers\nend"
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_2nd_grade_701_round2",
+        "formal_proof": "import data.real.basic\n\n-- defining the problem\ndef pizza_parts : \u211d := 4\ndef eaten_parts : \u211d := 2\n\n-- defining the fractional calculation\ndef left_parts := pizza_parts - eaten_parts\n\n-- proving the solution\nexample : left_parts / pizza_parts = 1 / 2 := \nbegin\n  have h0 : pizza_parts = 4, from rfl,\n  have h1 : eaten_parts = 2, from rfl,\n  have h2 : left_parts = pizza_parts - eaten_parts, from rfl,\n  rw h2,\n  rw h0, \n  rw h1,\n  norm_num,\nend"
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_Algebra_basics_322_round2",
+        "formal_proof": "import data.real.basic\n\n-- The Pythagorean theorem in Lean, a^2 + b^2 = c^2\ntheorem pythagorean_theorem (a b c : \u211d) (h : c^2 = a^2 + b^2) : a^2 + b^2 = c^2 :=\nbegin\n  rw h,\nend\n\n-- Application of the Pythagorean theorem\nexample : let a := (3 : \u211d), b := (4 : \u211d), c := (5 : \u211d) in a^2 + b^2 = c^2 :=\nbegin\n  apply pythagorean_theorem,\n  norm_num,\nend"
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_Basic geometry and measurement_468_round1",
+        "formal_proof": "import data.real.basic\n\n-- Defining the inequality\ndef inequal (x : \u211d) := 2*x - 3 > 5\n\n-- Proof that the smallest integer `x` that satisfies the inequality is 5\nexample : \u2203 x : \u2115, x > 4 \u2227 \u2200 y : \u2115, y > 4 \u2192 y \u2265 x :=\nbegin\n  use 5,\n  split,\n  { linarith, },\n  { intros y hy,\n    linarith, }\nend\n\n-- Calculating the volume of the cube\ndef volume_of_cube (side_length : \u2115) := side_length ^ 3\n\n-- Proof that the minimum volume of the cube is 125\nexample : volume_of_cube 5 = 125 :=\nbegin\n  unfold volume_of_cube,\n  exact rfl,\nend"
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Pre-algebra_178_round1",
+        "formal_proof": "import data.real.basic\n\n-- Definitions\nnoncomputable def profit (cost_price : \u211d) (selling_price : \u211d) : \u211d := selling_price - cost_price\nnoncomputable def percentage_profit (cost_price : \u211d) (selling_price : \u211d) : \u211d := (profit cost_price selling_price / cost_price) * 100\n\n-- Given values\ndef cost_price : \u211d := 60\ndef selling_price : \u211d := 90\n\n-- Calculate profit\nnoncomputable def calculate_profit := profit cost_price selling_price \n\n-- Calculate percentage profit\nnoncomputable def calculate_percentage_profit := percentage_profit cost_price selling_price "
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_Pre-algebra_467_round1",
+        "formal_proof": "import data.real.basic\n\n-- defining the total worth of the business\nnoncomputable def total_worth : \u211d := 200000\n\n-- defining Bob's share\nnoncomputable def bob_share : \u211d := 0.70 * total_worth\n\n-- defining Alice's share\nnoncomputable def alice_share : \u211d := total_worth - bob_share\n\n-- proof that Alice's share is $60,000\nexample : alice_share = 60000 :=\nbegin\n  unfold alice_share bob_share total_worth,\n  norm_num,\nend"
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_4th_grade_580_round2",
+        "formal_proof": "open nat\n\n-- define the total time played\ndef total_time_played : \u2115 := 4\n\n-- define the number of players\ndef number_of_players : \u2115 := 2\n\n-- define the function to calculate time played by each player\ndef time_each_played (total_time_played : \u2115) (number_of_players: \u2115) : \u2115 := total_time_played / number_of_players\n\n-- use the function to calculate the time each player played\n#eval time_each_played total_time_played number_of_players  -- output will be 2"
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_1st_grade_639_round1",
+        "formal_proof": "import data.nat.basic\n\nopen nat\n\ntheorem add_and_subtract : \n    \u2200 (a b c : \u2115), a = 1234 \u2192 b = 5678 \u2192 c = 3456 \u2192 a + b - c = 3456 :=\nbegin\n    intros,\n    rw \u1fb0,\n    rw \u1fb0_1,\n    rw \u1fb0_2,\n    refl,\nend"
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_7th_grade_896_round1",
+        "formal_proof": "def Mary_Apples : \u2115 := 15\ndef John_Apples : \u2115 := 2 * Mary_Apples\n#eval John_Apples"
+    },
+    {
+        "name": "new_step_formalans_kwgiven__word_problem_8th_grade_78",
+        "formal_proof": "import data.real.basic\n\nopen_locale classical\n\n-- defining the equation x^2 + y^2 = 25\ndef eqn (x y : \u2124) : Prop := x^2 + y^2 = 25\n\n-- proving John's solution is correct\nexample : eqn 3 4 :=\nbegin\n  unfold eqn,\n  norm_num,\nend\n\n-- proving Mary's solution is correct\nexample : eqn (-3) (-4) :=\nbegin\n  unfold eqn,\n  norm_num,\nend"
+    },
+    {
+        "name": "new_step_formalans_kwgiven__HIGH_word_problem_Algebra_1_955",
+        "formal_proof": "def f (n : \u2115) := 3*n - 2\n\n#eval f 10  -- Output: 28"
+    },
+    {
+        "name": "correct_by_msg__theorem_proving_AP_College_Statistics_123_round1",
+        "formal_proof": "import data.complex.basic\n\nopen complex\n\ntheorem add_complex_numbers (z\u2081 z\u2082 : \u2102) : \n  z\u2081.re + z\u2082.re = (z\u2081 + z\u2082).re \u2227 z\u2081.im + z\u2082.im = (z\u2081 + z\u2082).im :=\nbegin\n  -- Unpack the complex numbers z\u2081 and z\u2082\n  cases z\u2081 with a\u2081 b\u2081,\n  cases z\u2082 with a\u2082 b\u2082,\n\n  -- Simplify the left and right hand sides of the equations\n  simp only [add_re, add_im],\n\n  -- Prove the theorem by reflexivity\n  split; refl,\nend"
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Pre-algebra_601_round2",
+        "formal_proof": "import data.nat.basic\n\ndef speed_diff (s\u2081 s\u2082 : \u2115) : \u2115 := s\u2081 - s\u2082\ndef time_to_distance (d s : \u2115) : \u2115 := d / s\ndef time_for_tom_ahead_of_jerry : \u2115 := time_to_distance 8 (speed_diff 5 3)\n\n#eval time_for_tom_ahead_of_jerry"
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Basic geometry and measurement_910_round0",
+        "formal_proof": "def cube_volume (side : \u2115) : \u2115 := side * side * side\n#eval cube_volume 5"
+    },
+    {
+        "name": "correct_by_msg__HEDU_word_problem_College_Algebra_856_round0",
+        "formal_proof": "import data.real.basic\n\n-- defining the function\ndef f (x : \u211d) : \u211d := 2*x + 5\n\n-- proof\nexample : f 3 = 11 := \nbegin\n  unfold f, -- expand the definition of f\n  norm_num, -- simplify the arithmetic\nend"
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_4th_grade_647_round2",
+        "formal_proof": "open nat\n#eval 6 * 5  -- returns 30"
+    },
+    {
+        "name": "correct_by_msg__HEDU_theorem_proving_Linear_algebra_855_round1",
+        "formal_proof": "import linear_algebra.basic\n\nvariables {R : Type*} [comm_ring R]\nvariables {v w : fin 3 \u2192 R}\n\nlemma dot_product_commutative : finset.sum (finset.range 3) (\u03bb i, v i * w i) = finset.sum (finset.range 3) (\u03bb i, w i * v i) :=\nbegin\n  apply finset.sum_congr rfl,\n  intros i hi,\n  apply mul_comm,\nend"
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Algebra_basics_539_round0",
+        "formal_proof": "def Jim_apples : \u2115 := 5\ndef Sally_apples : \u2115 := 2 * Jim_apples\n\n#eval Sally_apples -- returns 10"
+    },
+    {
+        "name": "new_step_formalans_kwgiven__MIDD_word_problem_Algebra_basics_279",
+        "formal_proof": "def distance (speed : \u2115) (time : \u2115) : \u2115 := speed * time\n\ndef new_car_speed (old_car_speed : \u2115) : \u2115 := old_car_speed * 2\n\ndef problem := \n  let old_car_speed := 8 in\n  let new_car_speed := new_car_speed old_car_speed in\n  let time := 10 in\n  (new_car_speed, distance new_car_speed time)\n\n#eval problem  -- returns (16, 160)"
+    },
+    {
+        "name": "new_step_formalans_kwgiven__MIDD_theorem_proving_Algebra_basics_725",
+        "formal_proof": "import data.real.basic\n\ntheorem transitivity_of_inequality {a b c : \u211d} (hab : a < b) (hbc : b < c) : a < c :=\nlt_trans hab hbc"
+    },
+    {
+        "name": "new_step_formalans_kwgiven__ELEM_theorem_proving_2nd_grade_426",
+        "formal_proof": "open nat\n\nlemma johns_apples : 9 - 4 = 5 :=\nbegin\n  rw nat.sub_eq_iff_eq_add,\n  exact dec_trivial,\nend"
+    },
+    {
+        "name": "correct_by_msg__HIGH_word_problem_Calculus_2_717_round1",
+        "formal_proof": "import data.real.basic\n\nnoncomputable def s : \u211d \u2192 \u211d := \u03bb t, 5 * t\n\ntheorem boat_position_at_time_five : s 5 = 25 :=\nbegin\n  unfold s,\n  norm_num,\nend"
+    },
+    {
+        "name": "new_step_formalans_kwgiven__HIGH_word_problem_Statistics_and_probability_612",
+        "formal_proof": "import data.real.basic\n\n-- define the number of balls\ndef red_balls := 4\ndef blue_balls := 3\ndef green_balls := 5\ndef total_balls := red_balls + blue_balls + green_balls\n\n-- define the event of picking a red or green ball\ndef red_or_green_balls := red_balls + green_balls\n\n-- calculate the probability\ndef probability := red_or_green_balls / total_balls\n\n-- check the result\n#eval probability -- output: 0.75"
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Algebra_basics_401_round1",
+        "formal_proof": "import data.real.basic\n\n-- Define the variables\ndef savings (x : \u211d) : \u211d := 50 + 30 * x\ndef bike_cost : \u211d := 200\n\n-- Create a lemma stating that John's savings after x weeks is greater than or equal to the cost of the bike\nlemma john_savings (x : \u211d) (h : x \u2265 5) : savings x \u2265 bike_cost :=\nbegin\n  unfold savings bike_cost,\n  linarith,\nend"
+    },
+    {
+        "name": "new_step_formalans_kwgiven__ELEM_theorem_proving_1st_grade_641",
+        "formal_proof": "import data.real.basic\n\n-- defining the length and width of the rectangle\ndef length := (7 : \u211d) \ndef width := (5 : \u211d) \n\n-- defining the function for perimeter of a rectangle\ndef perimeter_of_rectangle (length width : \u211d) : \u211d := 2*(length + width)\n\n-- proving the perimeter of the rectangle ABCD is 24 units\nexample : perimeter_of_rectangle length width = 24 := \nbegin\n  unfold perimeter_of_rectangle length width, \n  norm_num,\nend"
+    },
+    {
+        "name": "new_step_formalans_kwgiven__ELEM_theorem_proving_2nd_grade_797",
+        "formal_proof": "import data.int.basic\n\nopen int\n\n-- define the initial number of marbles, the number of marbles bought, and the number of marbles lost\ndef initial_marbles : \u2124 := 45\ndef marbles_bought : \u2124 := 35\ndef marbles_lost : \u2124 := 20\n\n-- define the final number of marbles\ndef final_marbles := initial_marbles + marbles_bought - marbles_lost\n\n-- proof that the final number of marbles is 60\nexample : final_marbles = 60 := \nbegin\n  -- simplify the expression for final_marbles\n  unfold final_marbles,\n  -- calculate the final number of marbles\n  exact calc\n    initial_marbles + marbles_bought - marbles_lost = 45 + 35 - 20 : by refl\n    ...                                         = 80 - 20 : by refl\n    ...                                         = 60 : by refl,\nend"
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_8th_grade_365_round1",
+        "formal_proof": "import data.real.basic\n\n-- defining the total number of students, number of football players, basketball players and who plays both\ndef total_students : \u211d := 30\ndef football_players : \u211d := 10\ndef basketball_players : \u211d := 15\ndef plays_both : \u211d := 5\n\n-- defining the number of students who play either football or basketball\ndef plays_either : \u211d := football_players + basketball_players - plays_both\n\n-- defining the probability formula\nnoncomputable def probability (favorable_outcomes : \u211d) (total_outcomes : \u211d) : \u211d := favorable_outcomes / total_outcomes\n\n-- proving that the probability that a student picked at random plays either football or basketball is 2/3\nexample : probability plays_either total_students = 2 / 3 :=\nbegin\n  unfold plays_either,\n  unfold probability,\n  norm_num [total_students, football_players, basketball_players, plays_both],\nend"
+    }
+]

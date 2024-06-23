@@ -1,0 +1,302 @@
+[
+    {
+        "name": "correct_by_msg__ELEM_word_problem_1st_grade_766_round2",
+        "formal_proof": "import data.real.basic\n\n-- Defining the length and width of the garden\ndef garden_length : ℝ := 6\ndef garden_width : ℝ := 4\n\n-- Defining the formula for the perimeter of a rectangle\ndef perimeter (length width : ℝ) : ℝ := 2 * (length + width)\n\n-- Calculating the amount of fencing needed\n#eval perimeter garden_length garden_width  -- This returns 20",
+        "problem": "John has a rectangular garden that is 6 feet long and 4 feet wide. He plans to build a fence around his garden. How many feet of fencing will John need?",
+        "solution": "To find out the length of fencing needed to enclose the garden, we calculate the perimeter of the rectangular garden. The formula to find the perimeter of a rectangle is 2*(length + width). By substituting the given length (6 feet) and width (4 feet) into the formula, we get 2*(6 ft + 4 ft) = 2*10 ft = 20 ft. Therefore, John will need 20 feet of fencing."
+    },
+    {
+        "name": "correct_by_msg__HEDU_word_problem_College_Algebra_678_round0",
+        "formal_proof": "import data.real.basic\n\n-- define the polynomial function\ndef P (x : ℝ) : ℝ := 3*x^4 - 2*x^3 + x^2 - 5*x + 9\n\n-- prove that P(2) = 35\nexample : P 2 = 35 :=\nbegin\n  -- unfold the definition of P\n  unfold P,\n  -- simplify the expression to 35\n  norm_num,\nend",
+        "problem": "Suppose a polynomial function P(x) = 3x^4 - 2x^3 + x^2 - 5x + 9 represents the total profit of a company in terms of the number of products sold. If the profit is $35 when 2 products are sold, what is the value of P(2)?",
+        "solution": "To find the value of P(2), we substitute x = 2 into the polynomial function P(x) = 3x^4 - 2x^3 + x^2 - 5x + 9. \n\nSubstituting x = 2, we get P(2) = 3*(2)^4 - 2*(2)^3 + (2)^2 - 5*(2) + 9 = 3*16 - 2*8 + 4 - 10 + 9 = 48 - 16 + 4 - 10 + 9 = 35. \n\nHence, the value of the polynomial function P at x = 2 is 35."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__HIGH_theorem_proving_Algebra_2_182",
+        "formal_proof": "import data.real.basic\n\n-- let's define the functions for cost and revenue\ndef C (n : ℝ) := 5000 + 50*n\ndef R (n : ℝ) := 75*n\n\n-- we'll show that the break-even point occurs at n = 200\nexample : C 200 = R 200 :=\nbegin\n  unfold C, -- replace C with its definition\n  unfold R, -- replace R with its definition\n  norm_num, -- simplify the numerical computation\nend",
+        "problem": "A manufacturing company produces a certain product. The cost to produce `n` units of the product per month is $5000 + $50n, and the revenue from selling `n` units per month is $75n. Determine the number of units the company must produce and sell per month to break even.",
+        "solution": "To find the break-even point, we need to determine the number of units, denoted by `n`, where the cost equals the revenue. The cost function `C(n)` is given as $5000 + 50n$, and the revenue function `R(n)` is $75n$. \n\nTherefore, we need to solve the equation $5000 + 50n = 75n$ to find the break-even point.\n\nSubtracting $50n$ from both sides gives $5000 = 25n$.\n\nFinally, dividing both sides by 25 gives $n = 200$.\n\nHence, the company needs to produce and sell 200 units to break even."
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_4th_grade_741_round1",
+        "formal_proof": "def total_balls (red blue green : ℕ) : ℕ := red + blue + green\ndef removed_balls (red blue green : ℕ) : ℕ := red + blue + green\ndef remaining_balls (total removed : ℕ) : ℕ := total - removed\n\n#eval total_balls 27 35 21\n#eval removed_balls 14 6 10\n#eval remaining_balls (total_balls 27 35 21) (removed_balls 14 6 10)",
+        "problem": "In a collection of balls, there are 27 red balls, 35 blue balls, and 21 green balls. If 14 red balls, 6 blue balls, and 10 green balls are removed, how many balls remain in the collection?",
+        "solution": "To find the total number of balls, we sum the number of red, blue, and green balls. If we remove some balls (red, blue, and green), the remaining balls will be the total number of balls minus the removed balls. In this case, the total number of balls is 27 (red) + 35 (blue) + 21 (green) = 83. If we remove 14 red balls, 6 blue balls, and 10 green balls, the remaining balls will be 83 - 14 - 6 - 10 = 53."
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_5th_grade_419_round1",
+        "formal_proof": "import data.rat.basic\nimport tactic.norm_num\n\nopen rat\n\nexample : (21/4 : ℚ) + (5/2 : ℚ) = 31/4 :=\nbegin\n  norm_num,\nend",
+        "problem": "If one rope measures 21/4 meters and another rope measures 5/2 meters, what is the total length of both ropes when combined?",
+        "solution": "To solve this problem, we need to add the lengths of two ropes. The first rope measures 21/4 meters, and the second rope measures 5/2 meters. \n\nFirst, let's convert 21/4 and 5/2 to a common denominator. The common denominator for 4 and 2 is 4. So, 21/4 remains the same, and 5/2 becomes 10/4.\n\nNow, we add 21/4 and 10/4 together to get 31/4 meters. Therefore, the total length of the two ropes is 31/4 meters."
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_3rd_grade_657_round1",
+        "formal_proof": "open int \n\n-- define the money john has originally\ndef john_money_orig : int := 5\n\n-- define the money john spent at the bookstore\ndef john_money_spent : int := 20\n\n-- calculate the money john has now\ndef john_money_now : int := john_money_orig - john_money_spent\n\n#eval john_money_now -- the output should be -15",
+        "problem": "John had $5 in his wallet. He went to a bookstore and spent $20. How much money does John have now?",
+        "solution": "If John originally had $5 and spent $20 at the bookstore, we can calculate his remaining money by subtracting the money spent from the original amount. Thus, $5 - $20 = -$15. This means John now has a deficit of $15."
+    },
+    {
+        "name": "correct_by_msg__HEDU_word_problem_Linear_algebra_501_round1",
+        "formal_proof": "import data.real.basic\n\n-- the standard (x, y) coordinate system\ndef f (x : ℝ) := x^2\n\n-- the new coordinate system (u, v), where u = x^2\ndef g (u : ℝ) := u\n\n-- the definite integral from 0 to 1 in the standard calculus\ndef integral_f := (1 / 3) * (1 ^ 3 - 0 ^ 3)\n\n-- the definite integral from 0 to 1 in the new coordinate system\ndef integral_g := (1 / 2) * (1 ^ 2 - 0 ^ 2)\n\ntheorem integral_transform : integral_f = integral_g :=\nbegin\n    unfold integral_f integral_g f g,\n    norm_num,\nend",
+        "problem": "Consider the standard (x, y) coordinate system where y = x². Introduce a new coordinate system (u, v) where u = x². Calculate the definite integral from 0 to 1 in both the standard and the new coordinate systems. Show that the integral in the standard system is equal to the integral in the new system.",
+        "solution": "To analyze the transformation of the coordinate system, let's consider the standard (x, y) coordinate system where y = x². Now, we introduce a new coordinate system (u, v) where u = x². \n\nIn the standard coordinate system, the definite integral from 0 to 1 is calculated as the area under the curve of y = x² from x = 0 to x = 1. This integral is given by (1 / 3) * (1^3 - 0^3).\n\nIn the new coordinate system, the definite integral from 0 to 1 can be calculated in terms of the new variable u. This integral is given by (1 / 2) * (1^2 - 0^2).\n\nThe theorem to be proved states that the integral in the standard coordinate system is equal to the integral in the new coordinate system, showing the equivalence of the areas under the curves in the different coordinate systems."
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_1st_grade_184_round1",
+        "formal_proof": "import data.real.basic\n\n-- defining the parameters\ndef length := (5 : ℝ)\ndef width := (3 : ℝ)\n\n-- defining the formula for the perimeter of a rectangle\ndef rectangle_perimeter (length width : ℝ) := 2*(length + width)\n\n-- substituting the values into the formula and proving the result\nexample : rectangle_perimeter length width = 16 :=\nbegin\n  unfold rectangle_perimeter,\n  rw [length, width],\n  norm_num,\nend",
+        "problem": "John has a rectangular garden that is 5 meters long and 3 meters wide. He wants to build a fence around the garden. How many meters of fence does John need?",
+        "solution": "To determine the total length of the fencing needed, we need to calculate the perimeter of the rectangular garden. The perimeter of a rectangle is given by the formula 2*(length + width). By substituting the given values of length (5) and width (3) into the formula, we get 2*(5 + 3) = 16. Therefore, the total length of fencing needed is 16 units."
+    },
+    {
+        "name": "correct_by_msg__HEDU_word_problem_AP_College_Calculus_BC_824_round0",
+        "formal_proof": "import data.real.basic\nimport tactic\n\nopen real\n\n-- define the function and its derivative\ndef f (x : ℝ) := 3*x^2 - 2*x + 1\ndef df (x : ℝ) := 6*x - 2\n\n-- prove that the derivative at point x=2 is 10\nexample : df 2 = 10 :=\nbegin\n  unfold df,\n  norm_num,\nend",
+        "problem": "Suppose we have a function f(x) = 3x^2 - 2x + 1. Calculate the derivative of the function at the point x = 2.",
+        "solution": "To find the derivative of a function at a specific point, we differentiate the function and then substitute the given point into the derivative expression. \n\nGiven the function f(x) = 3x^2 - 2x + 1, the derivative f'(x) = 6x - 2. \n\nSubstituting x = 2 into f'(x) gives us f'(2) = 6*2 - 2 = 10.\n\nTherefore, the derivative of the function at x = 2 is 10."
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_4th_grade_783_round1",
+        "formal_proof": "import data.real.basic\n\nopen_locale classical\n\n-- We first define the fractions 1/2 and 1/4.\nnoncomputable def half : ℝ := 1/2\nnoncomputable def quarter : ℝ := 1/4\n\n-- We then state and prove the result.\ntheorem john_pizza : half - quarter = quarter :=\nbegin\n  unfold half quarter, -- This replaces 'half' and 'quarter' with their definitions.\n  norm_num, -- This performs the subtraction.\nend",
+        "problem": "John has a pizza slice that is 1/2 of a whole pizza. He then eats a quarter of the slice. How much of the original pizza slice does John have left?",
+        "solution": "To solve this problem, we need to understand how to subtract fractions. When subtracting fractions, we subtract the numerators (the top numbers) while keeping the same denominator (the bottom number). \n\nIn this case, we are subtracting 1/4 from 1/2. So, 1/2 - 1/4 = 2/4 - 1/4 = 1/4. Therefore, the result of the subtraction is 1/4."
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_4th_grade_230_round1",
+        "formal_proof": "import data.real.basic\n\nnoncomputable def dollars_in_pocket : ℝ := 3.4\nnoncomputable def dollars_spent : ℝ := 2.5\nnoncomputable def dollars_left : ℝ := dollars_in_pocket - dollars_spent\n\nexample : dollars_left = 0.9 :=\nbegin\n  unfold dollars_left,\n  unfold dollars_in_pocket,\n  unfold dollars_spent,\n  norm_num,\nend",
+        "problem": "If someone has 3.4 dollars in their pocket and they spend 2.5 dollars, how much money do they have left?",
+        "solution": "To solve this problem, we need to subtract the amount of money spent from the initial amount of money in the pocket. This involves subtracting decimals, which can be done by aligning the decimals and performing the subtraction.\n\nSo, we align the decimals and subtract:\n\n  3.4\n- 2.5\n------\n  0.9\n\nTherefore, there are 0.9 dollars left in the pocket."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__MIDD_theorem_proving_Algebra_basics_452",
+        "formal_proof": "import data.real.basic\n\ndef calculate_perimeter (length : ℝ) (width : ℝ) : ℝ := \n2 * (length + width)\n\ndef calculate_total_cost (perimeter : ℝ) (cost_per_meter : ℝ) : ℝ := \nperimeter * cost_per_meter\n\nexample : calculate_total_cost (calculate_perimeter 15 10) 5 = 250 :=\nbegin\n  unfold calculate_total_cost,\n  unfold calculate_perimeter,\n  norm_num,\nend",
+        "problem": "A rectangular garden has a length of 15 meters and a width of 10 meters. If the cost of building a fence around the garden is $5 per meter, what is the total cost to build the fence?",
+        "solution": "To prove this theorem, we first need to calculate the perimeter of the rectangle, which is given by the formula 2 * (length + width). Substituting the length as 15 and the width as 10, we get a perimeter of 2 * (15 + 10) = 2 * 25 = 50 meters. \n\nNext, we need to find the total cost of building the fence around the garden. The cost per meter is $5, so multiplying the perimeter by the cost per meter gives us 50 meters * $5/meter = $250. Therefore, the total cost of building the fence is $250."
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_8th_grade_518_round0",
+        "formal_proof": "import data.real.basic\n\n-- definition of variables\ndef pies_per_bakery_per_day := 100\ndef bakeries := 4\ndef days_per_week := 7\n\n-- calculation\ndef total_pies := pies_per_bakery_per_day * bakeries * days_per_week\n\n-- proof\nexample : total_pies = 2800 :=\nbegin\n  unfold total_pies,\n  unfold pies_per_bakery_per_day,\n  unfold bakeries,\n  unfold days_per_week,\n  norm_num,\nend",
+        "problem": "In a town, there are 4 bakeries, and each bakery bakes 100 pies per day. If the bakeries operate 7 days a week, how many pies are baked in total in a week?",
+        "solution": "To find the total number of pies baked in a week, we need to multiply the number of pies baked by each bakery per day (100 pies) by the number of bakeries (4) and the number of days in a week (7). Therefore, the total number of pies baked in a week is 100 pies/bakery/day * 4 bakeries * 7 days/week = 2800 pies."
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_8th_grade_561_round1",
+        "formal_proof": "import data.int.basic\n\n-- First, declare the variables and the assumptions\ndef fence_cost_per_meter := 5\ndef length := 15\ndef width := 7\ndef perimeter := 2 * (length + width)\n\n-- Then, define the function to calculate the cost of the fence\ndef fence_cost (perimeter : ℕ) (fence_cost_per_meter : ℕ) : ℕ := perimeter * fence_cost_per_meter\n\n-- Finally, evaluate the function with the given values\n#eval fence_cost perimeter fence_cost_per_meter\n-- This will return 220, which is the correct answer.",
+        "problem": "John is planning to build a fence around his rectangular garden. The length of the garden is 15 meters and the width is 7 meters. If the cost of the fence is $5 per meter, how much will John spend in total to fence the entire garden?",
+        "solution": "To find out the total cost of the fence, we first calculate the perimeter of the rectangular garden. The formula for the perimeter of a rectangle is 2*(length + width). Substituting the given values, we get 2*(15 + 7) = 44 meters. Given that the cost of the fence is $5 per meter, the total cost to fence the garden will be 44 meters * $5/meter = $220."
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_1st_grade_385_round1",
+        "formal_proof": "import data.real.basic\n\ntheorem add_neg_new : ∀ (x y : ℝ), x < 0 → y > 0 → x + y < y :=\nbegin\n  intros x y h1 h2,\n  linarith,\nend",
+        "problem": "If x is a negative number and y is a positive number, prove that the sum of x and y is less than y.",
+        "solution": "In this problem, we are dealing with two numbers, x and y. The number x is negative (less than 0), and the number y is positive (greater than 0). When a negative number is added to a positive number, the sum is less than the positive number. This is because the negative number reduces the value of the positive number when added to it."
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_2nd_grade_880_round1",
+        "formal_proof": "import data.real.basic\n\n-- definition of perimeter of rectangle\ndef perimeter (length width : ℝ) : ℝ := 2 * (length + width)\n\n-- definition of area of rectangle\ndef area (length width : ℝ) : ℝ := length * width\n\n-- given values\ndef garden_length : ℝ := 5\ndef garden_width : ℝ := 3\n\n-- calculate perimeter\n#eval perimeter garden_length garden_width\n-- returns 16\n\n-- calculate area\n#eval area garden_length garden_width\n-- returns 15",
+        "problem": "Alice has a rectangular garden that is 5 units long and 3 units wide. She wants to build a fence around her garden. How many units of fence does Alice need? Also, what is the area of Alice's garden in square units?",
+        "solution": "To calculate the amount of fence needed for the garden, we need to find the perimeter of the rectangular garden. The formula for the perimeter of a rectangle is `2*(length + width)`. By substituting the given length of 5 units and width of 3 units into the formula, we get 2*(5 + 3) = 2*8 = 16 units of fence needed. \n\nTo find the area of the garden, we use the formula for the area of a rectangle, which is `length * width`. Substituting the length of 5 units and width of 3 units into the formula, we get 5 * 3 = 15 square units for the area of the garden."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__ELEM_theorem_proving_3rd_grade_60",
+        "formal_proof": "import data.real.basic\n\n-- We first define what it means for a quadrilateral ABCD to be a parallelogram.\n-- A parallelogram is a quadrilateral with opposite sides of equal length.\ndef is_parallelogram (AB : ℝ) (BC : ℝ) (CD : ℝ) (DA : ℝ) : Prop := AB = CD ∧ BC = DA\n\n-- We then prove that if a quadrilateral has opposite sides of equal length, then it is a parallelogram.\ntheorem quadrilateral_is_parallelogram (AB : ℝ) (BC : ℝ) (CD : ℝ) (DA : ℝ) (h : AB = CD ∧ BC = DA) : is_parallelogram AB BC CD DA := \nbegin\n  -- Unpack the hypothesis that the opposite sides of the quadrilateral are of equal length.\n  cases h with h1 h2,\n  -- Since the opposite sides of the quadrilateral are of equal length, by definition, the quadrilateral is a parallelogram.\n  exact ⟨h1, h2⟩,\nend",
+        "problem": "Consider a quadrilateral ABCD with sides AB = CD and BC = DA. Is the quadrilateral necessarily a parallelogram?",
+        "solution": "If a quadrilateral has opposite sides of equal length, it is necessarily a parallelogram. This is because a parallelogram is defined as a quadrilateral with opposite sides of equal length. Therefore, if a quadrilateral satisfies this property, it must be a parallelogram."
+    },
+    {
+        "name": "correct_by_msg__HIGH_word_problem_Algebra_2_574_round1",
+        "formal_proof": "import data.real.basic\n\n-- Here we define the measures of the angles\ndef angle_BAC : ℝ := 35\ndef angle_ABC : ℝ := 75\ndef angle_BCA : ℝ := 180 - (angle_BAC + angle_ABC)\n\n-- Here we prove that the measure of angle BCA is 70\nexample : angle_BCA = 70 :=\nbegin\n  unfold angle_BCA, -- This replaces `angle_BCA` with its definition\n  unfold angle_BAC, -- This replaces `angle_BAC` with its definition\n  unfold angle_ABC, -- This replaces `angle_ABC` with its definition\n  norm_num, -- This simplifies numerical calculations\nend",
+        "problem": "In a triangle ABC, if the measure of angle BAC is 35 degrees and the measure of angle ABC is 75 degrees, what is the measure of angle BCA?",
+        "solution": "In a triangle ABC, the measure of angle BAC is 35 degrees and the measure of angle ABC is 75 degrees. To find the measure of angle BCA, we subtract the sum of the measures of angle BAC and angle ABC from 180 degrees. Therefore, the measure of angle BCA is 70 degrees."
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_4th_grade_590_round0",
+        "formal_proof": "def rectangle_area (length width : ℕ) : ℕ := length * width\ndef square_area (side : ℕ) : ℕ := side * side\n\ndef poster_not_covered (rectangle_length rectangle_width square_side : ℕ) : ℕ :=\nrectangle_area rectangle_length rectangle_width - square_area square_side\n\nexample : poster_not_covered 10 8 5 = 55 :=\nbegin\nrw poster_not_covered,\nrw rectangle_area,\nrw square_area,\nexact dec_trivial,\nend",
+        "problem": "In an art class, a poster has a rectangular shape with a length of 10 units and a width of 8 units. A square-shaped sticker with each side measuring 5 units is placed on the poster. How much area of the poster is not covered by the square sticker?",
+        "solution": "To find out how much area of the poster is not covered by the square, we need to calculate the area of the rectangle and the square. The area of the rectangle with a length of 10 units and a width of 8 units is 10 units * 8 units = 80 square units. \n\nNext, we calculate the area of the square with each side being 5 units. The area of the square is 5 units * 5 units = 25 square units. \n\nSubtracting the area of the square from the area of the rectangle gives us the area not covered by the square, which is 80 square units - 25 square units = 55 square units."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__MIDD_theorem_proving_Pre-algebra_295",
+        "formal_proof": "import data.real.basic\n\nexample : ∀ x : ℝ, 3*x - 7 + 2*x = 21 + x → x = 7 :=\nbegin\n  intros,\n  linarith,\nend",
+        "problem": "Solve the equation 3x - 7 + 2x = 21 + x for x.",
+        "solution": "To solve the equation 3x - 7 + 2x = 21 + x for x, we first simplify the left side by combining like terms. This gives us 5x - 7 = 21 + x. Next, we isolate x by subtracting x from both sides to get 4x - 7 = 21. Then, we add 7 to both sides to obtain 4x = 28. Finally, by dividing both sides by 4, we find that x = 7. Hence, the solution to the equation is x = 7."
+    },
+    {
+        "name": "correct_by_msg__word_problem_2nd_grade_52_round1",
+        "formal_proof": "open nat\n\n-- Define the number of seashells Alice and Bob collected in the morning and the afternoon\ndef Alice_morning := 7\ndef Alice_afternoon := 8\ndef Bob_morning := 12\ndef Bob_afternoon := 5\n\n-- Calculate the total number of seashells Alice and Bob collected by the end of the day\ndef Alice_total := Alice_morning + Alice_afternoon -- Alice has 15 seashells\ndef Bob_total := Bob_morning - Bob_afternoon -- Bob has 7 seashells\n\n-- The total number of seashells Alice and Bob have at the end of the day\ndef total_seashells := Alice_total + Bob_total\n\n-- Verify that the total number of seashells Alice and Bob have is 22\nexample : total_seashells = 22 :=\nbegin\n  unfold total_seashells, -- Replace total_seashells with its definition\n  unfold Alice_total, -- Replace Alice_total with its definition\n  unfold Bob_total, -- Replace Bob_total with its definition\n  refl, -- The goal is now 22 = 22, which is true by reflexivity\nend",
+        "problem": "In the morning, Alice collected 7 seashells, and in the afternoon, she collected 8 more seashells. At the same time, Bob collected 12 seashells in the morning and 5 seashells in the afternoon. How many seashells did Alice and Bob have together at the end of the day?",
+        "solution": "In the morning, Alice collected 7 seashells, and in the afternoon, she collected 8 more seashells, giving her a total of 15 seashells. On the other hand, Bob collected 12 seashells in the morning and 5 seashells in the afternoon, totaling 7 seashells. Therefore, at the end of the day, Alice and Bob together have 15 + 7 = 22 seashells."
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Pre-algebra_624_round0",
+        "formal_proof": "import data.real.basic\n\n-- Proof\nexample : ∃ x : ℝ, x - 30 + 50 = 120 := \nbegin\n  use 100,\n  norm_num,\nend",
+        "problem": "John had a certain amount of money. He spent $30 and then received $50. After these transactions, he had $120. How much money did John initially have?",
+        "solution": "To solve this problem, we need to consider a scenario where someone starts with a certain amount of money, then subtracts a portion of it, and finally adds a fixed amount to reach a total. \n\nLet's say John had some money, then he spent $30, and finally received an additional $50. After all these transactions, he ended up with $120 in total."
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_Basic geometry and measurement_238_round1",
+        "formal_proof": "import data.real.basic\n\n-- Let's define the rectangle as a structure with length and width\nstructure rectangle :=\n(length : ℝ)\n(width : ℝ)\n\n-- Let's define a function to calculate the area of a rectangle\ndef area (r : rectangle) : ℝ :=\nr.length * r.width\n\n-- Let's define a function for the scale transformation of a rectangle\ndef scale (r : rectangle) (factor : ℝ) : rectangle :=\n{ length := r.length * factor, \n  width := r.width * factor }\n\n-- The main theorem\ntheorem scale_doubles_area (r : rectangle) (factor : ℝ) : \n  area (scale r factor) = factor^2 * area r :=\nbegin\n  -- Expanding the definition of area for both sides\n  unfold area,\n  unfold scale,\n  -- The result follows from simple arithmetic\n  ring,\nend\n\n-- Let's test our theorem with the given values\ndef my_rectangle : rectangle := { length := 4, width := 2 }\ndef my_scaled_rectangle : rectangle := scale my_rectangle 2\n#eval area my_scaled_rectangle -- It should return '32'",
+        "problem": "Given a rectangle with a length of 4 units and a width of 2 units, if it is scaled by a factor of 2, what will be the area of the new rectangle?",
+        "solution": "To prove the theorem, we first need to understand that the area of a rectangle is calculated by multiplying its length by its width. When a rectangle is scaled by a factor, both the length and the width are multiplied by that factor. Therefore, the new area of the scaled rectangle can be found by squaring the scaling factor and multiplying it by the original area of the rectangle.\n\nIn this case, if the original rectangle has a length of 4 units and a width of 2 units, and it is scaled by a factor of 2, the new area of the scaled rectangle will be 2^2 * (4 * 2) = 32 square units."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__theorem_proving_5th_grade_127",
+        "formal_proof": "import data.real.basic\n\n-- definition of the problem\ndef problem := λ x y : ℝ, (x * 10^2) + (y * 10^2)\n\n-- proof of the problem\nexample : problem 0.2 0.4 = 60 :=\nbegin\n  unfold problem, -- unfolding the definition of problem\n  norm_num,       -- simplifying the numbers\nend",
+        "problem": "If we have 20 units of something represented by 0.2 and 40 units of something represented by 0.4, what is the total number of units we have in all?",
+        "solution": "To find the total value of 0.2 and 0.4 when each is multiplied by 100 (since 10^2 = 100), we first multiply 0.2 by 100 to get 20, and 0.4 by 100 to get 40. Adding these values together gives us a total of 60."
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_2nd_grade_701_round2",
+        "formal_proof": "import data.real.basic\n\n-- defining the problem\ndef pizza_parts : ℝ := 4\ndef eaten_parts : ℝ := 2\n\n-- defining the fractional calculation\ndef left_parts := pizza_parts - eaten_parts\n\n-- proving the solution\nexample : left_parts / pizza_parts = 1 / 2 := \nbegin\n  have h0 : pizza_parts = 4, from rfl,\n  have h1 : eaten_parts = 2, from rfl,\n  have h2 : left_parts = pizza_parts - eaten_parts, from rfl,\n  rw h2,\n  rw h0, \n  rw h1,\n  norm_num,\nend",
+        "problem": "A pizza is divided into 4 equal parts. If a child eats 2 of these parts, what fraction of the pizza is left?",
+        "solution": "If there are 4 parts of a pizza and a child eats 2 of these parts, the number of parts left can be calculated by subtracting the eaten parts from the total parts. Therefore, the child has 2 parts out of 4 left, which simplifies to 1/2 of the pizza."
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_Algebra_basics_322_round2",
+        "formal_proof": "import data.real.basic\n\n-- The Pythagorean theorem in Lean, a^2 + b^2 = c^2\ntheorem pythagorean_theorem (a b c : ℝ) (h : c^2 = a^2 + b^2) : a^2 + b^2 = c^2 :=\nbegin\n  rw h,\nend\n\n-- Application of the Pythagorean theorem\nexample : let a := (3 : ℝ), b := (4 : ℝ), c := (5 : ℝ) in a^2 + b^2 = c^2 :=\nbegin\n  apply pythagorean_theorem,\n  norm_num,\nend",
+        "problem": "Prove using the Pythagorean theorem that in a right triangle with sides of lengths 3, 4, and 5 units, the square of the length of the hypotenuse is equal to the sum of the squares of the other two sides.",
+        "solution": "Consider a right triangle with sides of lengths 3, 4, and 5 units. \n\nIn a right triangle, the square of the length of the hypotenuse (c) is equal to the sum of the squares of the other two sides (a and b). So, we have:\n\nc^2 = a^2 + b^2\n\nSubstitute the given lengths a = 3, b = 4, and c = 5 into the equation:\n\n5^2 = 3^2 + 4^2 = 25 = 9 + 16\n\nTherefore, the Pythagorean theorem holds true for this right triangle with side lengths 3, 4, and 5."
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_Basic geometry and measurement_468_round1",
+        "formal_proof": "import data.real.basic\n\n-- Defining the inequality\ndef inequal (x : ℝ) := 2*x - 3 > 5\n\n-- Proof that the smallest integer `x` that satisfies the inequality is 5\nexample : ∃ x : ℕ, x > 4 ∧ ∀ y : ℕ, y > 4 → y ≥ x :=\nbegin\n  use 5,\n  split,\n  { linarith, },\n  { intros y hy,\n    linarith, }\nend\n\n-- Calculating the volume of the cube\ndef volume_of_cube (side_length : ℕ) := side_length ^ 3\n\n-- Proof that the minimum volume of the cube is 125\nexample : volume_of_cube 5 = 125 :=\nbegin\n  unfold volume_of_cube,\n  exact rfl,\nend",
+        "problem": "For the inequality $2x - 3 > 5$, what is the smallest integer `x` that satisfies this inequality? Additionally, what is the volume of a cube with a side length of 5 units?",
+        "solution": "To solve this problem, we first need to find the smallest integer `x` that satisfies the inequality $2x - 3 > 5$. By rearranging the inequality, we get $2x > 8$, and thus $x > 4$. Therefore, the smallest integer `x` that satisfies the inequality is 5.\n\nNext, we calculate the volume of a cube with a side length of 5 units. The volume of a cube is given by the formula $V = s^3$, where $s$ represents the side length. Substituting the side length of 5 into the formula, we find that the volume of the cube is 125 cubic units."
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Pre-algebra_178_round1",
+        "formal_proof": "import data.real.basic\n\n-- Definitions\nnoncomputable def profit (cost_price : ℝ) (selling_price : ℝ) : ℝ := selling_price - cost_price\nnoncomputable def percentage_profit (cost_price : ℝ) (selling_price : ℝ) : ℝ := (profit cost_price selling_price / cost_price) * 100\n\n-- Given values\ndef cost_price : ℝ := 60\ndef selling_price : ℝ := 90\n\n-- Calculate profit\nnoncomputable def calculate_profit := profit cost_price selling_price \n\n-- Calculate percentage profit\nnoncomputable def calculate_percentage_profit := percentage_profit cost_price selling_price ",
+        "problem": "Alice bought an item for $60 and sold it for $90. How much profit did Alice make, and what is the percentage profit she earned on the item?",
+        "solution": "To find the profit made by selling an item, we subtract the cost price from the selling price. In this case, the cost price of an item is $60 and the selling price is $90. So, the profit made by selling the item would be $90 - $60 = $30.\n\nNext, to calculate the percentage profit, we divide the profit by the cost price and then multiply by 100 to get the percentage. The profit made is $30 and the cost price is $60. Therefore, the percentage profit is (30 / 60) * 100 = 50%."
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_Pre-algebra_467_round1",
+        "formal_proof": "import data.real.basic\n\n-- defining the total worth of the business\nnoncomputable def total_worth : ℝ := 200000\n\n-- defining Bob's share\nnoncomputable def bob_share : ℝ := 0.70 * total_worth\n\n-- defining Alice's share\nnoncomputable def alice_share : ℝ := total_worth - bob_share\n\n-- proof that Alice's share is $60,000\nexample : alice_share = 60000 :=\nbegin\n  unfold alice_share bob_share total_worth,\n  norm_num,\nend",
+        "problem": "In a business venture, the total worth of the business is $200,000. If Bob's share is 70% of the total worth, how much money does Alice receive if she gets the remaining share?",
+        "solution": "To solve this problem, we first calculate the total worth of the business, which is $200,000. Bob's share is 70% of the total worth, so we find Bob's share by multiplying 0.70 by the total worth. Subtracting Bob's share from the total worth gives us Alice's share. After calculations, we find that Alice's share is $60,000."
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_4th_grade_580_round2",
+        "formal_proof": "open nat\n\n-- define the total time played\ndef total_time_played : ℕ := 4\n\n-- define the number of players\ndef number_of_players : ℕ := 2\n\n-- define the function to calculate time played by each player\ndef time_each_played (total_time_played : ℕ) (number_of_players: ℕ) : ℕ := total_time_played / number_of_players\n\n-- use the function to calculate the time each player played\n#eval time_each_played total_time_played number_of_players  -- output will be 2",
+        "problem": "Two friends decided to play a game together. If the game lasted for 4 hours in total, and there were 2 players, how many hours did each player play?",
+        "solution": "If a game lasts for 4 hours and is played by 2 players, we can calculate the time each player played by dividing the total time by the number of players. Therefore, each player played for 2 hours."
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_1st_grade_639_round1",
+        "formal_proof": "import data.nat.basic\n\nopen nat\n\ntheorem add_and_subtract : \n    ∀ (a b c : ℕ), a = 1234 → b = 5678 → c = 3456 → a + b - c = 3456 :=\nbegin\n    intros,\n    rw ᾰ,\n    rw ᾰ_1,\n    rw ᾰ_2,\n    refl,\nend",
+        "problem": "Suppose we have three numbers a, b, and c. If a = 1234, b = 5678, and c = 3456, what is the result of adding a and b, then subtracting c from the sum?",
+        "solution": "Let's say we have three numbers: a, b, and c, where a = 1234, b = 5678, and c = 3456. We are asked to find the result of adding a and b, then subtracting c from it. First, we substitute the given values into the expression: 1234 + 5678 - 3456. By performing the addition first, we get 6912. Then, subtracting 3456 from 6912, we indeed obtain 3456."
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_7th_grade_896_round1",
+        "formal_proof": "def Mary_Apples : ℕ := 15\ndef John_Apples : ℕ := 2 * Mary_Apples\n#eval John_Apples",
+        "problem": "Mary has 15 apples. If John has twice as many apples as Mary, how many apples does John have?",
+        "solution": "If Mary has 15 apples, John has twice as many apples as Mary, which means John has 2 * 15 = 30 apples."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__word_problem_8th_grade_78",
+        "formal_proof": "import data.real.basic\n\nopen_locale classical\n\n-- defining the equation x^2 + y^2 = 25\ndef eqn (x y : ℤ) : Prop := x^2 + y^2 = 25\n\n-- proving John's solution is correct\nexample : eqn 3 4 :=\nbegin\n  unfold eqn,\n  norm_num,\nend\n\n-- proving Mary's solution is correct\nexample : eqn (-3) (-4) :=\nbegin\n  unfold eqn,\n  norm_num,\nend",
+        "problem": "Consider a circle with its center at the origin (0,0) and a radius of 5. John claims that the point (3,4) lies on the circle, while Mary claims that the point (-3, -4) lies on the circle. Are their claims correct?",
+        "solution": "To solve this problem, we need to find the points that lie on the circle with center at the origin (0,0) and radius 5. The equation representing this circle is x² + y² = 25.\n\nJohn proposed the point (3,4) as a solution. Let's substitute x = 3 and y = 4 into the equation x² + y² = 25. This gives us 3² + 4² = 25, which simplifies to 9 + 16 = 25, verifying that John's solution is correct.\n\nMary suggested the point (-3, -4) as a solution. Substituting x = -3 and y = -4 into the equation x² + y² = 25, we get (-3)² + (-4)² = 25, which simplifies to 9 + 16 = 25, confirming that Mary's solution is also correct."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__HIGH_word_problem_Algebra_1_955",
+        "formal_proof": "def f (n : ℕ) := 3*n - 2\n\n#eval f 10  -- Output: 28",
+        "problem": "Consider a linear function `f(n) = 3n - 2`. \nWhat is the value of `f(10)`?",
+        "solution": "The function `f(n) = 3n - 2` represents a linear relationship where the output is three times the input minus two. To find the value of `f(10)`, we substitute `n` with `10` in the function equation. Therefore, the calculation becomes `f(10) = 3*10 - 2`, which simplifies to `f(10) = 30 - 2 = 28`. Hence, the value of `f(10)` is `28`."
+    },
+    {
+        "name": "correct_by_msg__theorem_proving_AP_College_Statistics_123_round1",
+        "formal_proof": "import data.complex.basic\n\nopen complex\n\ntheorem add_complex_numbers (z₁ z₂ : ℂ) : \n  z₁.re + z₂.re = (z₁ + z₂).re ∧ z₁.im + z₂.im = (z₁ + z₂).im :=\nbegin\n  -- Unpack the complex numbers z₁ and z₂\n  cases z₁ with a₁ b₁,\n  cases z₂ with a₂ b₂,\n\n  -- Simplify the left and right hand sides of the equations\n  simp only [add_re, add_im],\n\n  -- Prove the theorem by reflexivity\n  split; refl,\nend",
+        "problem": "Prove that for any two complex numbers z₁ = a₁ + b₁i and z₂ = a₂ + b₂i, the sum of their real parts and the sum of their imaginary parts are equal to the real part and imaginary part of their sum, respectively.",
+        "solution": "Complex numbers are expressed in the form a + bi, where 'a' is the real part and 'bi' is the imaginary part. When two complex numbers z₁ = a₁ + b₁i and z₂ = a₂ + b₂i are added together, their real parts and imaginary parts are added separately. Therefore, the sum of the real parts of z₁ and z₂ is equal to the real part of the sum of z₁ and z₂, and the sum of the imaginary parts of z₁ and z₂ is equal to the imaginary part of the sum of z₁ and z₂.\n\nHence, (a₁ + a₂) = (a₁ + a₂) and (b₁ + b₂) = (b₁ + b₂), which proves that the sum of two complex numbers maintains this property."
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Pre-algebra_601_round2",
+        "formal_proof": "import data.nat.basic\n\ndef speed_diff (s₁ s₂ : ℕ) : ℕ := s₁ - s₂\ndef time_to_distance (d s : ℕ) : ℕ := d / s\ndef time_for_tom_ahead_of_jerry : ℕ := time_to_distance 8 (speed_diff 5 3)\n\n#eval time_for_tom_ahead_of_jerry",
+        "problem": "Tom and Jerry are running a race. Tom runs at a speed of 8 miles per hour, while Jerry runs at a speed of 3 miles per hour. How long does it take for Tom to be 8 miles ahead of Jerry?",
+        "solution": "To solve this problem, we first calculate the speed difference between Tom and Jerry. Tom's speed is 8 miles per hour, and Jerry's speed is 3 miles per hour. Therefore, the speed difference is 8 - 3 = 5 miles per hour. \n\nNext, we determine the time it takes for Tom to be ahead of Jerry by a certain distance. Given that the speed difference is 5 miles per hour, we can calculate the time it takes for Tom to be ahead of Jerry by 8 miles. This time can be found by dividing the distance (8 miles) by the speed difference (5 miles per hour), which gives us 8 / 5 = 1.6 hours."
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Basic geometry and measurement_910_round0",
+        "formal_proof": "def cube_volume (side : ℕ) : ℕ := side * side * side\n#eval cube_volume 5",
+        "problem": "A cube-shaped gift box has a side length of 5 cm. What is the volume of the gift box?",
+        "solution": "To find the volume of a cube, we need to cube the length of one side. In this case, the side length is 5 cm. Thus, the volume of the cube is 5 cm * 5 cm * 5 cm = 125 cubic centimeters."
+    },
+    {
+        "name": "correct_by_msg__HEDU_word_problem_College_Algebra_856_round0",
+        "formal_proof": "import data.real.basic\n\n-- defining the function\ndef f (x : ℝ) : ℝ := 2*x + 5\n\n-- proof\nexample : f 3 = 11 := \nbegin\n  unfold f, -- expand the definition of f\n  norm_num, -- simplify the arithmetic\nend",
+        "problem": "Consider the linear function f(x) = 2x + 5. Calculate the value of f(3).",
+        "solution": "Given the function f(x) = 2x + 5, we are asked to find the value of f(3) by substituting x = 3 into the function. \n\nSubstituting x = 3 into the function f(x) = 2x + 5, we get f(3) = 2*3 + 5 = 6 + 5 = 11. \n\nTherefore, the value of f(3) is 11."
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_4th_grade_647_round2",
+        "formal_proof": "open nat\n#eval 6 * 5  -- returns 30",
+        "problem": "A stationary store has 6 boxes of pencils. Each box contains 5 pencils. How many pencils are there in total in the store?",
+        "solution": "To determine the total number of pencils in a store, we need to multiply the number of boxes by the number of pencils in each box. So, if there are 6 boxes with 5 pencils in each box, we calculate 6 (boxes) times 5 (pencils per box) to get 30 pencils in total."
+    },
+    {
+        "name": "correct_by_msg__HEDU_theorem_proving_Linear_algebra_855_round1",
+        "formal_proof": "import linear_algebra.basic\n\nvariables {R : Type*} [comm_ring R]\nvariables {v w : fin 3 → R}\n\nlemma dot_product_commutative : finset.sum (finset.range 3) (λ i, v i * w i) = finset.sum (finset.range 3) (λ i, w i * v i) :=\nbegin\n  apply finset.sum_congr rfl,\n  intros i hi,\n  apply mul_comm,\nend",
+        "problem": "Prove that the dot product of two vectors in ℝ³ is commutative.",
+        "solution": "The dot product of two vectors is calculated by summing up the products of the corresponding components of the vectors. For vectors `v` = [v1, v2, v3] and `w` = [w1, w2, w3], the dot product v • w is v1 * w1 + v2 * w2 + v3 * w3. \n\nSince multiplication of real numbers is commutative, the order of multiplication does not affect the result. Thus, the dot product of `v` and `w` is equal to the dot product of `w` and `v`. Therefore, the dot product is commutative."
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Algebra_basics_539_round0",
+        "formal_proof": "def Jim_apples : ℕ := 5\ndef Sally_apples : ℕ := 2 * Jim_apples\n\n#eval Sally_apples -- returns 10",
+        "problem": "Jim has 5 apples. If Sally has twice as many apples as Jim, how many apples does Sally have?",
+        "solution": "If Jim has 5 apples, Sally has twice as many apples as Jim. Therefore, Sally has 2 * 5 = 10 apples."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__MIDD_word_problem_Algebra_basics_279",
+        "formal_proof": "def distance (speed : ℕ) (time : ℕ) : ℕ := speed * time\n\ndef new_car_speed (old_car_speed : ℕ) : ℕ := old_car_speed * 2\n\ndef problem := \n  let old_car_speed := 8 in\n  let new_car_speed := new_car_speed old_car_speed in\n  let time := 10 in\n  (new_car_speed, distance new_car_speed time)\n\n#eval problem  -- returns (16, 160)",
+        "problem": "A car initially travels at a speed of 8 meters per second. If the speed of the car is doubled, how far will the car travel in 10 seconds?",
+        "solution": "If a car initially travels at a speed of 8 meters per second and then its speed is doubled, the new speed of the car would be 16 meters per second. \n\nNow, if the car maintains this new speed for 10 seconds, we can calculate the total distance covered by the car using the formula `distance = speed × time`. \n\nTherefore, the car would cover a distance of 16 meters per second * 10 seconds = 160 meters."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__MIDD_theorem_proving_Algebra_basics_725",
+        "formal_proof": "import data.real.basic\n\ntheorem transitivity_of_inequality {a b c : ℝ} (hab : a < b) (hbc : b < c) : a < c :=\nlt_trans hab hbc",
+        "problem": "Let a, b, and c be real numbers. If a is less than b and b is less than c, prove that a is less than c.",
+        "solution": "Suppose we have three real numbers a, b, and c such that a < b and b < c. This means that a is less than b and b is less than c. By the transitive property of inequalities, if a < b and b < c, then it follows that a < c. Therefore, if a is smaller than b and b is smaller than c, then a must be smaller than c."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__ELEM_theorem_proving_2nd_grade_426",
+        "formal_proof": "open nat\n\nlemma johns_apples : 9 - 4 = 5 :=\nbegin\n  rw nat.sub_eq_iff_eq_add,\n  exact dec_trivial,\nend",
+        "problem": "John has 9 apples. If he eats 4 of them, how many apples does John have left?",
+        "solution": "If John initially has 9 apples and he eats 4 of them, we can calculate the remaining apples by subtracting the eaten apples from the initial amount. Thus, 9 - 4 equals 5. Therefore, John has 5 apples left."
+    },
+    {
+        "name": "correct_by_msg__HIGH_word_problem_Calculus_2_717_round1",
+        "formal_proof": "import data.real.basic\n\nnoncomputable def s : ℝ → ℝ := λ t, 5 * t\n\ntheorem boat_position_at_time_five : s 5 = 25 :=\nbegin\n  unfold s,\n  norm_num,\nend",
+        "problem": "A boat is moving on a river at a constant speed. The position of the boat at time t minutes is given by the function s(t) = 5t. What is the position of the boat at t = 5 minutes?",
+        "solution": "The position of a boat on a river is given by the function s(t) = 5t, where t represents the time in minutes since the boat started moving. To find the position of the boat at t = 5 minutes, we substitute t = 5 into the function s(t) = 5 * t. Therefore, the position of the boat at t = 5 minutes is s(5) = 5 * 5 = 25."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__HIGH_word_problem_Statistics_and_probability_612",
+        "formal_proof": "import data.real.basic\n\n-- define the number of balls\ndef red_balls := 4\ndef blue_balls := 3\ndef green_balls := 5\ndef total_balls := red_balls + blue_balls + green_balls\n\n-- define the event of picking a red or green ball\ndef red_or_green_balls := red_balls + green_balls\n\n-- calculate the probability\ndef probability := red_or_green_balls / total_balls\n\n-- check the result\n#eval probability -- output: 0.75",
+        "problem": "In a bag, there are 4 red balls, 3 blue balls, and 5 green balls. If a ball is drawn at random, what is the probability that it is either red or green?",
+        "solution": "To find the probability of drawing either a red or green ball from a bag, we first determine the total number of balls in the bag. There are 4 red balls, 3 blue balls, and 5 green balls, making a total of 12 balls. \n\nNext, we calculate the number of red or green balls by adding the count of red balls (4) and green balls (5), resulting in 9 balls. \n\nTherefore, the probability of selecting either a red or green ball is the number of red or green balls divided by the total number of balls, which is 9/12 = 0.75 or 75%."
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Algebra_basics_401_round1",
+        "formal_proof": "import data.real.basic\n\n-- Define the variables\ndef savings (x : ℝ) : ℝ := 50 + 30 * x\ndef bike_cost : ℝ := 200\n\n-- Create a lemma stating that John's savings after x weeks is greater than or equal to the cost of the bike\nlemma john_savings (x : ℝ) (h : x ≥ 5) : savings x ≥ bike_cost :=\nbegin\n  unfold savings bike_cost,\n  linarith,\nend",
+        "problem": "John is saving money to buy a new bike. He already has $50 saved and is adding $30 to his savings every week. If the bike costs $200, how many weeks does John need to save to have enough money to buy the bike?",
+        "solution": "Let's denote the number of weeks John has been saving as x. Initially, John had $50 saved, and he is adding $30 to his savings each week. \n\nTo find out if John has enough money to buy the bike that costs $200, we need to compare his total savings with the cost of the bike. \n\nTherefore, the total savings equation is given by: Total savings = $50 + $30 * x, where x represents the number of weeks John has been saving.\n\nTo prove that John's savings are enough to buy the bike, we need to show that Total savings ≥ $200. If we substitute the values, we get: $50 + $30 * x ≥ $200.\n\nBy solving this inequality, we can find the minimum number of weeks John needs to save to afford the bike."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__ELEM_theorem_proving_1st_grade_641",
+        "formal_proof": "import data.real.basic\n\n-- defining the length and width of the rectangle\ndef length := (7 : ℝ) \ndef width := (5 : ℝ) \n\n-- defining the function for perimeter of a rectangle\ndef perimeter_of_rectangle (length width : ℝ) : ℝ := 2*(length + width)\n\n-- proving the perimeter of the rectangle ABCD is 24 units\nexample : perimeter_of_rectangle length width = 24 := \nbegin\n  unfold perimeter_of_rectangle length width, \n  norm_num,\nend",
+        "problem": "In a rectangular garden, the length of one side is 7 units and the width is 5 units. What is the total perimeter of the garden?",
+        "solution": "To calculate the perimeter of a rectangle, we add up the lengths of all its sides. In this case, the rectangle has a length of 7 units and a width of 5 units. By using the formula 2*(length + width), we find that the total perimeter of the rectangle is 24 units."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__ELEM_theorem_proving_2nd_grade_797",
+        "formal_proof": "import data.int.basic\n\nopen int\n\n-- define the initial number of marbles, the number of marbles bought, and the number of marbles lost\ndef initial_marbles : ℤ := 45\ndef marbles_bought : ℤ := 35\ndef marbles_lost : ℤ := 20\n\n-- define the final number of marbles\ndef final_marbles := initial_marbles + marbles_bought - marbles_lost\n\n-- proof that the final number of marbles is 60\nexample : final_marbles = 60 := \nbegin\n  -- simplify the expression for final_marbles\n  unfold final_marbles,\n  -- calculate the final number of marbles\n  exact calc\n    initial_marbles + marbles_bought - marbles_lost = 45 + 35 - 20 : by refl\n    ...                                         = 80 - 20 : by refl\n    ...                                         = 60 : by refl,\nend",
+        "problem": "John initially had 45 marbles. He then bought 35 marbles and later lost 20 marbles. How many marbles does John have now?",
+        "solution": "First, we add the initial number of marbles John had to the number of marbles he bought. So, 45 marbles + 35 marbles = 80 marbles. Then, we subtract the number of marbles he lost from the total. Thus, 80 marbles - 20 marbles = 60 marbles. Therefore, John has 60 marbles now."
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_8th_grade_365_round1",
+        "formal_proof": "import data.real.basic\n\n-- defining the total number of students, number of football players, basketball players and who plays both\ndef total_students : ℝ := 30\ndef football_players : ℝ := 10\ndef basketball_players : ℝ := 15\ndef plays_both : ℝ := 5\n\n-- defining the number of students who play either football or basketball\ndef plays_either : ℝ := football_players + basketball_players - plays_both\n\n-- defining the probability formula\nnoncomputable def probability (favorable_outcomes : ℝ) (total_outcomes : ℝ) : ℝ := favorable_outcomes / total_outcomes\n\n-- proving that the probability that a student picked at random plays either football or basketball is 2/3\nexample : probability plays_either total_students = 2 / 3 :=\nbegin\n  unfold plays_either,\n  unfold probability,\n  norm_num [total_students, football_players, basketball_players, plays_both],\nend",
+        "problem": "In a class of 30 students, 10 students play football, 15 students play basketball, and 5 students play both football and basketball. What is the probability that a student chosen at random plays either football or basketball?",
+        "solution": "To find the probability that a student chosen at random plays either football or basketball, we first determine the total number of students playing either sport. This involves adding the number of football players to the number of basketball players and then subtracting the students who play both sports to avoid double counting. Hence, we have 10 (football) + 15 (basketball) - 5 (both) = 20 students.\n\nThe number of students who do not play either football or basketball can then be calculated by subtracting the number of students playing either sport from the total number of students, which is 30 - 20 = 10 students.\n\nTherefore, the probability that a randomly selected student plays either football or basketball is the number of students who play either sport divided by the total number of students, resulting in 20/30 = 2/3."
+    }
+]

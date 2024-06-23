@@ -1,0 +1,62 @@
+[
+    {
+        "name": "correct_by_msg__ELEM_word_problem_5th_grade_419_round1",
+        "formal_proof": "import data.rat.basic\nimport tactic.norm_num\n\nopen rat\n\nexample : (21/4 : ℚ) + (5/2 : ℚ) = 31/4 :=\nbegin\n  norm_num,\nend",
+        "problem": "A car travels 21/4 miles in the morning and then continues its journey by traveling an additional 5/2 miles in the afternoon. What is the total distance the car traveled?",
+        "solution": "To calculate the total distance traveled by a car, we need to add the distance it covered in the first part of the journey (21/4 miles) to the distance it covered in the second part of the journey (5/2 miles). \n\nAdding 21/4 miles and 5/2 miles, we get 31/4 miles in total. Therefore, the car traveled a total distance of 31/4 miles."
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Pre-algebra_624_round0",
+        "formal_proof": "import data.real.basic\n\n-- Proof\nexample : ∃ x : ℝ, x - 30 + 50 = 120 := \nbegin\n  use 100,\n  norm_num,\nend",
+        "problem": "Jack has a certain amount of money in his bank account. He spent $30 on a book and then deposited $50. After these transactions, his account balance is $120. How much money did he initially have in his account?",
+        "solution": "Let's represent the initial amount of money in Jack's bank account by the variable x. The problem can be modeled by a one-step equation. Jack spent $30 on a book and then deposited $50, resulting in his account balance being $120. \n\nBy setting up the equation x - 30 + 50 = 120, we can solve for the initial amount of money in Jack's account. \n\nCombining like terms, we simplify the equation to x + 20 = 120. \n\nSubtracting 20 from both sides, we isolate x to find x = 100. Therefore, Jack initially had $100 in his bank account."
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_1st_grade_184_round1",
+        "formal_proof": "import data.real.basic\n\n-- defining the parameters\ndef length := (5 : ℝ)\ndef width := (3 : ℝ)\n\n-- defining the formula for the perimeter of a rectangle\ndef rectangle_perimeter (length width : ℝ) := 2*(length + width)\n\n-- substituting the values into the formula and proving the result\nexample : rectangle_perimeter length width = 16 :=\nbegin\n  unfold rectangle_perimeter,\n  rw [length, width],\n  norm_num,\nend",
+        "problem": "There is a rectangular garden with a length of 5 units and a width of 3 units. What is the perimeter of the rectangle?",
+        "solution": "To find the perimeter of a rectangle, we add up the lengths of all its sides. For a rectangle with sides of length 5 units and width 3 units, the perimeter is calculated as 2*(5 + 3) = 16 units. Therefore, the perimeter of the rectangle is 16 units."
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_1st_grade_639_round1",
+        "formal_proof": "import data.nat.basic\n\nopen nat\n\ntheorem add_and_subtract : \n    ∀ (a b c : ℕ), a = 1234 → b = 5678 → c = 3456 → a + b - c = 3456 :=\nbegin\n    intros,\n    rw ᾰ,\n    rw ᾰ_1,\n    rw ᾰ_2,\n    refl,\nend",
+        "problem": "Suppose we have three 4-digit numbers: 1234, 5678, and 3456. If we add the first two numbers together and then subtract the third number from the sum, what is the result?",
+        "solution": "Let's consider three numbers: a = 1234, b = 5678, and c = 3456. \nFirst, we add a and b together: 1234 + 5678 = 6912. \nNext, we subtract c from the sum: 6912 - 3456 = 3456. \nTherefore, the result of the operation is 3456."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__theorem_proving_5th_grade_127",
+        "formal_proof": "import data.real.basic\n\n-- definition of the problem\ndef problem := λ x y : ℝ, (x * 10^2) + (y * 10^2)\n\n-- proof of the problem\nexample : problem 0.2 0.4 = 60 :=\nbegin\n  unfold problem, -- unfolding the definition of problem\n  norm_num,       -- simplifying the numbers\nend",
+        "problem": "If we have two decimal numbers, 0.2 and 0.4, and we multiply each of them by the power of ten (10^2) and then add the results, what is the final result?",
+        "solution": "Let's solve this problem step by step. First, we need to multiply each decimal number by the power of ten (10^2). When we multiply 0.2 by 10^2, we get 20. Similarly, by multiplying 0.4 by 10^2, we get 40. Finally, we add these two results together, which gives us a total of 60. Therefore, the final result of multiplying each decimal by 10^2 and adding them is 60."
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_Basic geometry and measurement_468_round1",
+        "formal_proof": "import data.real.basic\n\n-- Defining the inequality\ndef inequal (x : ℝ) := 2*x - 3 > 5\n\n-- Proof that the smallest integer `x` that satisfies the inequality is 5\nexample : ∃ x : ℕ, x > 4 ∧ ∀ y : ℕ, y > 4 → y ≥ x :=\nbegin\n  use 5,\n  split,\n  { linarith, },\n  { intros y hy,\n    linarith, }\nend\n\n-- Calculating the volume of the cube\ndef volume_of_cube (side_length : ℕ) := side_length ^ 3\n\n-- Proof that the minimum volume of the cube is 125\nexample : volume_of_cube 5 = 125 :=\nbegin\n  unfold volume_of_cube,\n  exact rfl,\nend",
+        "problem": "Consider an inequality `2x - 3 > 5`, where `x` represents the number of unit blocks on one side of a cube. What is the smallest integer value of `x` that satisfies the inequality? Additionally, if the cube has a side length of 5 units, what is the volume of the cube?",
+        "solution": "To find the smallest integer `x` that satisfies the inequality `2x - 3 > 5`, we first add `3` to both sides of the inequality to get `2x > 8`. Next, we divide both sides by `2` to obtain `x > 4`. Therefore, the smallest integer value that satisfies the inequality is `5`.\n\nThe volume of a cube is calculated by cubing the side length. For a cube with a side length of 5 units, the volume would be `5^3 = 125`."
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_8th_grade_518_round0",
+        "formal_proof": "import data.real.basic\n\n-- definition of variables\ndef pies_per_bakery_per_day := 100\ndef bakeries := 4\ndef days_per_week := 7\n\n-- calculation\ndef total_pies := pies_per_bakery_per_day * bakeries * days_per_week\n\n-- proof\nexample : total_pies = 2800 :=\nbegin\n  unfold total_pies,\n  unfold pies_per_bakery_per_day,\n  unfold bakeries,\n  unfold days_per_week,\n  norm_num,\nend",
+        "problem": "In a small town, there are 4 bakeries. Each bakery sells 100 pies per day. After a week, how many pies in total did the 4 bakeries sell?",
+        "solution": "To solve this problem, we need to calculate the number of pies sold by each bakery in a day, which is 100 pies. Since there are 4 bakeries, the total number of pies sold by the 4 bakeries in a day is 100 pies/bakery * 4 bakeries = 400 pies. \n\nNext, we calculate the total number of pies sold in a week. With a week consisting of 7 days, the total number of pies sold by the 4 bakeries in a week is 400 pies/day * 7 days = 2800 pies. \n\nHence, the 4 bakeries sold a total of 2800 pies in a week."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__MIDD_word_problem_Algebra_basics_279",
+        "formal_proof": "def distance (speed : ℕ) (time : ℕ) : ℕ := speed * time\n\ndef new_car_speed (old_car_speed : ℕ) : ℕ := old_car_speed * 2\n\ndef problem := \n  let old_car_speed := 8 in\n  let new_car_speed := new_car_speed old_car_speed in\n  let time := 10 in\n  (new_car_speed, distance new_car_speed time)\n\n#eval problem  -- returns (16, 160)",
+        "problem": "John has an old toy car that can travel 8 meters in a minute. He also has a new toy car that can travel twice as fast as the old car. If John lets the new car run for x minutes, how far will the new car be able to travel? Write an expression for the distance the new car can travel in terms of x, and then calculate the distance when x equals 10.",
+        "solution": "Suppose John owns an old toy car that can travel 8 meters in a minute. He also has a new toy car that can travel twice as fast as the old car. Therefore, the new car can travel 2 * 8 = 16 meters in a minute. If John lets the new car run for x minutes, the distance it can cover is given by the expression 16 * x.\n\nIf x equals 10, then the new car can cover a distance of 16 * 10 = 160 meters."
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_4th_grade_580_round2",
+        "formal_proof": "open nat\n\n-- define the total time played\ndef total_time_played : ℕ := 4\n\n-- define the number of players\ndef number_of_players : ℕ := 2\n\n-- define the function to calculate time played by each player\ndef time_each_played (total_time_played : ℕ) (number_of_players: ℕ) : ℕ := total_time_played / number_of_players\n\n-- use the function to calculate the time each player played\n#eval time_each_played total_time_played number_of_players  -- output will be 2",
+        "problem": "Tom and Jerry, two best friends, enjoy playing video games together. One Sunday, they played video games for 4 hours straight. If they each played an equal amount of time, how long did each of them play?",
+        "solution": "Tom and Jerry played for a total of 4 hours. Since they played an equal amount of time, we can divide the total time by the number of players to find the time each one played. Dividing 4 hours by 2 players, we find that each of them played for 2 hours."
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_2nd_grade_880_round1",
+        "formal_proof": "import data.real.basic\n\n-- definition of perimeter of rectangle\ndef perimeter (length width : ℝ) : ℝ := 2 * (length + width)\n\n-- definition of area of rectangle\ndef area (length width : ℝ) : ℝ := length * width\n\n-- given values\ndef garden_length : ℝ := 5\ndef garden_width : ℝ := 3\n\n-- calculate perimeter\n#eval perimeter garden_length garden_width\n-- returns 16\n\n-- calculate area\n#eval area garden_length garden_width\n-- returns 15",
+        "problem": "John has a rectangular garden that is 5 meters long and 3 meters wide. How many meters of fence does he need to build around the garden? Also, if each flower needs 1 square meter of space, how many flowers can he plant in the garden?",
+        "solution": "To find out the total length of the fence needed for John's garden, we must calculate the perimeter of the rectangular garden. The formula for the perimeter of a rectangle is 2*(length + width). Substituting the given length of 5 meters and width of 3 meters into the formula, we get 2*(5 + 3) = 16 meters.\n\nNext, to determine the number of flowers John can plant in the garden, we need to calculate the area of the garden. The formula for the area of a rectangle is length*width. Substituting the given values, we get 5*3 = 15 flowers.\n\nTherefore, John needs 16 meters of fence for the garden and can plant 15 flowers in the garden."
+    }
+]

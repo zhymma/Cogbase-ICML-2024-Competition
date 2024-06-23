@@ -1,0 +1,23 @@
+[
+    {
+        "name": "correct_by_msg__ELEM_word_problem_1st_grade_766_round2",
+        "informal_statement": "Sally has a rectangle garden. The length of the garden is 6 feet and the width is 4 feet. She wants to build a fence around the garden. How many feet of fencing will she need?",
+        "informal_proof": "The perimeter of a rectangle is calculated by adding up all its sides. Since a rectangle has two equal length sides and two equal width sides, the formula to calculate the perimeter is 2 * (length + width). Given that the length of the garden is 6 feet and the width is 4 feet, substituting these values into the formula gives 2 * (6 + 4) = 20 feet. Therefore, Sally will need 20 feet of fencing.",
+        "model_output": "```lean\nimport data.real.basic\n\n-- Defining the length and width of the garden\ndef garden_length : ℝ := 6\ndef garden_width : ℝ := 4\n\n-- Defining the formula for the perimeter of a rectangle\ndef perimeter (length width : ℝ) : ℝ := 2 * (length + width)\n\n-- Calculating the amount of fencing needed\n#eval perimeter garden_length garden_width  -- This returns 20\n```",
+        "formal_proof": "import data.real.basic\n\n-- Defining the length and width of the garden\ndef garden_length : ℝ := 6\ndef garden_width : ℝ := 4\n\n-- Defining the formula for the perimeter of a rectangle\ndef perimeter (length width : ℝ) : ℝ := 2 * (length + width)\n\n-- Calculating the amount of fencing needed\n#eval perimeter garden_length garden_width  -- This returns 20"
+    },
+    {
+        "name": "correct_by_msg__HEDU_word_problem_College_Algebra_678_round0",
+        "informal_statement": "Let `P(x)` be a polynomial function defined as `P(x) = 3x^4 - 2x^3 + x^2 - 5x + 9`. \nWhat is the value of `P(x)` when `x = 2`?",
+        "informal_proof": "We substitute `x = 2` into the polynomial function.\n`P(2) = 3*(2^4) - 2*(2^3) + (2^2) - 5*2 + 9`.\nCalculating the terms, we get `P(2) = 3*16 - 2*8 + 4 - 10 + 9 = 48 - 16 + 4 - 10 + 9 = 35`.\n\nSo, the value of `P(2)` is `35`.",
+        "model_output": "```lean\nimport data.real.basic\n\n-- define the polynomial function\ndef P (x : ℝ) : ℝ := 3*x^4 - 2*x^3 + x^2 - 5*x + 9\n\n-- prove that P(2) = 35\nexample : P 2 = 35 :=\nbegin\n  -- unfold the definition of P\n  unfold P,\n  -- simplify the expression to 35\n  norm_num,\nend\n```",
+        "formal_proof": "import data.real.basic\n\n-- define the polynomial function\ndef P (x : ℝ) : ℝ := 3*x^4 - 2*x^3 + x^2 - 5*x + 9\n\n-- prove that P(2) = 35\nexample : P 2 = 35 :=\nbegin\n  -- unfold the definition of P\n  unfold P,\n  -- simplify the expression to 35\n  norm_num,\nend"
+    },
+    {
+        "name": "new_step_formalans_kwgiven__HIGH_theorem_proving_Algebra_2_182",
+        "informal_statement": "A company has a start-up cost of $5000, and it costs the company $50 to make each unit of their product. If each unit is sold for $75, how many units does the company need to sell to break even?",
+        "informal_proof": "To find out how many units the company needs to sell to break even, we need to find the point where the company's revenue equals its costs.\n\nThe company's total cost is made up of a fixed start-up cost of $5000, plus $50 for each unit made. We can model this with the equation C = 5000 + 50n, where C is the total cost and n is the number of units.\n\nThe company's total revenue is $75 for each unit sold, which we can model with the equation R = 75n, where R is the total revenue and n is the number of units.\n\nSetting these two equations equal to each other gives us 5000 + 50n = 75n. Solving this equation for n gives us n = 200.\n\nSo, the company needs to sell 200 units to break even.",
+        "model_output": "```lean\nimport data.real.basic\n\n-- Define the cost and revenue functions based on the number of units n\ndef C (n : ℝ) := 5000 + 50 * n  -- Total cost function\ndef R (n : ℝ) := 75 * n         -- Revenue function\n\n-- Prove that the break-even point occurs at n = 200\nexample : C 200 = R 200 :=\nbegin\n  unfold C,  -- Expand the definition of C\n  unfold R,  -- Expand the definition of R\n  norm_num,  -- Perform numerical simplification\nend\n```",
+        "formal_proof": "import data.real.basic\n\n-- Define the cost and revenue functions based on the number of units n\ndef C (n : ℝ) := 5000 + 50 * n  -- Total cost function\ndef R (n : ℝ) := 75 * n         -- Revenue function\n\n-- Prove that the break-even point occurs at n = 200\nexample : C 200 = R 200 :=\nbegin\n  unfold C,  -- Expand the definition of C\n  unfold R,  -- Expand the definition of R\n  norm_num,  -- Perform numerical simplification\nend"
+    }
+]

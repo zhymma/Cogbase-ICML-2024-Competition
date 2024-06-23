@@ -1,0 +1,252 @@
+[
+    {
+        "name": "correct_by_msg__ELEM_word_problem_1st_grade_766_round2",
+        "informal_statement": "Sally has a rectangle garden. The length of the garden is 6 feet and the width is 4 feet. She wants to build a fence around the garden. How many feet of fencing will she need?",
+        "informal_proof": "The perimeter of a rectangle is calculated by adding up all its sides. Since a rectangle has two equal length sides and two equal width sides, the formula to calculate the perimeter is 2 * (length + width). Given that the length of the garden is 6 feet and the width is 4 feet, substituting these values into the formula gives 2 * (6 + 4) = 20 feet. Therefore, Sally will need 20 feet of fencing."
+    },
+    {
+        "name": "correct_by_msg__HEDU_word_problem_College_Algebra_678_round0",
+        "informal_statement": "Let `P(x)` be a polynomial function defined as `P(x) = 3x^4 - 2x^3 + x^2 - 5x + 9`. \nWhat is the value of `P(x)` when `x = 2`?",
+        "informal_proof": "We substitute `x = 2` into the polynomial function.\n`P(2) = 3*(2^4) - 2*(2^3) + (2^2) - 5*2 + 9`.\nCalculating the terms, we get `P(2) = 3*16 - 2*8 + 4 - 10 + 9 = 48 - 16 + 4 - 10 + 9 = 35`.\n\nSo, the value of `P(2)` is `35`."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__HIGH_theorem_proving_Algebra_2_182",
+        "informal_statement": "A company has a start-up cost of $5000, and it costs the company $50 to make each unit of their product. If each unit is sold for $75, how many units does the company need to sell to break even?",
+        "informal_proof": "To find out how many units the company needs to sell to break even, we need to find the point where the company's revenue equals its costs.\n\nThe company's total cost is made up of a fixed start-up cost of $5000, plus $50 for each unit made. We can model this with the equation C = 5000 + 50n, where C is the total cost and n is the number of units.\n\nThe company's total revenue is $75 for each unit sold, which we can model with the equation R = 75n, where R is the total revenue and n is the number of units.\n\nSetting these two equations equal to each other gives us 5000 + 50n = 75n. Solving this equation for n gives us n = 200.\n\nSo, the company needs to sell 200 units to break even."
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_4th_grade_741_round1",
+        "informal_statement": "Given that a bag contains 27 red balls, 35 blue balls, and 21 green balls. If we remove 14 red balls, 6 blue balls, and 10 green balls from the bag, can we estimate the number of balls remaining in the bag to be around 50?",
+        "informal_proof": "We start with the total number of balls in the bag, which is the sum of the number of red balls, blue balls, and green balls. That is, 27 + 35 + 21 = 83 balls.\nThen we subtract the number of balls removed, which is 14 red balls, 6 blue balls, and 10 green balls. That is, 14 + 6 + 10 = 30 balls. \nSo the number of balls remaining in the bag is 83 - 30 = 53 balls.\nTherefore, the estimate of around 50 balls is quite close to the actual number of balls remaining in the bag."
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_5th_grade_419_round1",
+        "informal_statement": "John has $5.25 in his piggy bank. His mom gives him $2.50 extra. How much money does John have now?",
+        "informal_proof": "To find out how much money John has now, we need to add the money he had in his piggy bank and the money his mom gave him. That's $5.25 + $2.50 = $7.75. So, John now has $7.75."
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_3rd_grade_657_round1",
+        "informal_statement": "John has $5. He then spent $20 at the bookstore. How much money does John have now?",
+        "informal_proof": "John originally has $5. He then spent $20, which means he has $5 - $20 = -$15. Negative $15 means John owes $15, so John has -$15 now."
+    },
+    {
+        "name": "correct_by_msg__HEDU_word_problem_Linear_algebra_501_round1",
+        "informal_statement": "Consider the integral \u222b from 0 to 1 of the function f(x) = x^2 dx in the standard (x, y) coordinate system. Now, suppose we switch to a new coordinate system, (u, v), where u = x^2 and v = y. What is the value of the integral \u222b from 0 to 1 of the function g(u) = u in the new coordinate system (u, v)?",
+        "informal_proof": "In the standard (x, y) coordinate system, the integral \u222b from 0 to 1 of the function f(x) = x^2 dx is calculated as follows:\n\u222b from 0 to 1 of x^2 dx = [1/3]*x^3 evaluated from 0 to 1 = [1/3]*1 - [1/3]*0 = 1/3.\n\nNow, when we switch to the new coordinate system (u, v), where u = x^2, the function g(u) = u is equivalent to the function f(x) = x^2 in the old coordinate system. Hence, the integral \u222b from 0 to 1 of the function g(u) = u in the new coordinate system is also 1/3."
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_1st_grade_184_round1",
+        "informal_statement": "Let's say we have a rectangle with a length of 5 units and a width of 3 units. What is the perimeter of the rectangle?",
+        "informal_proof": "The perimeter of a rectangle is calculated by the formula 2*(length + width). In our case, the length is 5 units and the width is 3 units. Substituting these values into the formula, we get 2*(5 + 3) = 2*8 = 16 units. Therefore, the perimeter of the rectangle is 16 units."
+    },
+    {
+        "name": "correct_by_msg__HEDU_word_problem_AP_College_Calculus_BC_824_round0",
+        "informal_statement": "Let's consider a function f(x) = 3x^2 - 2x + 1. Calculate the derivative of this function at the point x = 2.",
+        "informal_proof": "To solve this problem, we first need to find the derivative of the function. The derivative of f(x) = 3x^2 - 2x + 1 is f'(x) = 6x - 2. \n\nThen, to find the derivative of the function at the point x = 2, we substitute x = 2 into the derivative function. So, f'(2) = 6*2 - 2 = 10."
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_4th_grade_783_round1",
+        "informal_statement": "John had 1/2 of a pizza and he ate 1/4 of it. How much pizza does he have left?",
+        "informal_proof": "John had 1/2 of a pizza and he ate 1/4 of it. In order to find out how much pizza John has left, we need to subtract the fraction of the pizza John ate from the fraction of the pizza he originally had. So, we subtract 1/4 from 1/2. The result is 1/4, so John has 1/4 of the pizza left."
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_4th_grade_230_round1",
+        "informal_statement": "If you have 3.4 dollars in your pocket and you spend 2.5 dollars, how many dollars do you have left?",
+        "informal_proof": "To solve this problem, we need to subtract the amount spent (2.5 dollars) from the total amount we had initially (3.4 dollars). When we subtract 2.5 from 3.4, we get 0.9. So, you have 0.9 dollars left."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__MIDD_theorem_proving_Algebra_basics_452",
+        "informal_statement": "A rectangular garden has a length of 15 meters and a width of 10 meters. A gardener wants to place a fence around the garden. If the cost of the fence is $5 per meter, how much will the gardener pay for the fence?",
+        "informal_proof": "First, we need to calculate the perimeter of the rectangular garden. The formula for the perimeter of a rectangle is 2 * (length + width). So for this garden, the perimeter will be 2 * (15 + 10) = 50 meters. \n\nNext, we multiply the length of the fence (which is the same as the perimeter of the garden) by the cost per meter of the fence. So the total cost of the fence will be 50 * $5 = $250."
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_8th_grade_518_round0",
+        "informal_statement": "In a small town, there are 4 bakeries. Each bakery sells 3 types of pies: apple, cherry and blueberry. Each bakery sold 100 pies each day. After a week, how many pies in total did the 4 bakeries sell?",
+        "informal_proof": "First, we calculate the number of pies one bakery sells in a day, which is 100 pies. Since there are 4 bakeries, the total number of pies sold by the 4 bakeries in a day is 100 pies/bakery * 4 bakeries = 400 pies. \n\nThen, we calculate the total number of pies sold in a week. Since a week has 7 days, the total number of pies sold by the 4 bakeries in a week is 400 pies/day * 7 days = 2800 pies. \n\nSo, the 4 bakeries sold a total of 2800 pies in a week."
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_8th_grade_561_round1",
+        "informal_statement": "A rectangular garden has a length of 15 meters and a width of 7 meters. A gardener wants to build a fence around the garden. If each section of the fence is 1 meter long and costs 5 dollars, how much will he need to spend to build the fence?",
+        "informal_proof": "First, we need to find the perimeter of the rectangular garden. The formula for the perimeter of a rectangle is 2*(length + width). So, we substitute the given values and get 2*(15 + 7) = 44 meters.\n\nNext, we need to find out how many sections of the fence will be needed. Since each section is 1 meter long, we will need 44 sections to cover the entire perimeter.\n\nFinally, to find out how much the gardener needs to spend, we multiply the number of sections by the cost of each section. That gives us 44 * 5 = 220 dollars. \n\nSo, the gardener needs to spend 220 dollars to build the fence."
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_1st_grade_385_round1",
+        "informal_statement": "If x is a negative integer and y is a positive integer, prove that x + y is less than y.",
+        "informal_proof": "Since x is a negative integer, adding x to any positive integer y will result in a number that is less than y. This is because adding a negative number is equivalent to subtracting its absolute value, which always decreases the original number."
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_2nd_grade_880_round1",
+        "informal_statement": "John has a rectangular garden that is 5 meters long and 3 meters wide. He wants to build a fence around the garden. What is the total length of the fence he needs? Also, he wants to plant flowers in the entire garden, if each flower needs 1 square meter space, how many flowers can he plant?",
+        "informal_proof": "The length of the fence John needs is the perimeter of the garden. The formula to calculate the perimeter of a rectangle is 2*(length + width). Substituting the given values, we get 2*(5 + 3) = 16 meters.\n\nThe number of flowers that John can plant is equal to the area of the garden. The formula to calculate the area of a rectangle is length*width. Substituting the given values, we get 5*3 = 15 flowers."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__ELEM_theorem_proving_3rd_grade_60",
+        "informal_statement": "In a quadrilateral ABCD, if AB = CD and AD = BC, is ABCD a parallelogram?",
+        "informal_proof": "Yes, ABCD is a parallelogram. In a quadrilateral, if the opposite sides are equal, then it is a parallelogram. Here, opposite sides AB and CD are equal, and AD and BC are also equal. So, according to the property of a parallelogram, ABCD is a parallelogram."
+    },
+    {
+        "name": "correct_by_msg__HIGH_word_problem_Algebra_2_574_round1",
+        "informal_statement": "In triangle ABC, the measure of angle BAC is 35 degrees and the measure of angle ABC is 75 degrees. What is the measure of angle BCA?",
+        "informal_proof": "In a triangle, the sum of the measures of the three interior angles is always 180 degrees. So, we can calculate the measure of angle BCA by subtracting the sum of the measures of angles BAC and ABC from 180. That is, measure of angle BCA = 180 - (measure of angle BAC + measure of angle ABC) = 180 - (35 + 75) = 70 degrees."
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_4th_grade_590_round0",
+        "informal_statement": "John has a rectangular poster with a length of 10 inches and a width of 8 inches. He also has a square photograph with a side length of 5 inches. He wants to place the photograph in the center of the poster. What is the area of the poster that will not be covered by the photograph?",
+        "informal_proof": "To find the area of the poster that will not be covered by the photograph, we need to subtract the area of the photograph from the area of the poster. \n\nFirst, we find the area of the rectangle (poster) by multiplying the length by the width. So, 10 inches * 8 inches = 80 square inches. \n\nThen, we find the area of the square (photograph) by squaring the side length. So, 5 inches * 5 inches = 25 square inches. \n\nFinally, we subtract the area of the photograph from the area of the poster: 80 square inches - 25 square inches = 55 square inches. \n\nSo, 55 square inches of the poster will not be covered by the photograph."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__MIDD_theorem_proving_Pre-algebra_295",
+        "informal_statement": "Solve for x in the equation: 3x - 7 + 2x = 21 + x.",
+        "informal_proof": "First, we can combine like terms on both sides of the equation, which gives us 5x - 7 = 21 + x. Then, we subtract x from both sides to get 4x - 7 = 21. Next, we add 7 to both sides of the equation to isolate the term with x on one side, resulting in 4x = 28. Finally, we divide both sides by 4 to solve for x, which gives us x = 7."
+    },
+    {
+        "name": "correct_by_msg__word_problem_2nd_grade_52_round1",
+        "informal_statement": "Alice and Bob are collecting seashells at the beach. Alice collected 7 seashells in the morning and she collected another 8 seashells in the afternoon. Bob collected 12 seashells in the morning and he lost 5 seashells in the afternoon. How many seashells do Alice and Bob have in total at the end of the day?",
+        "informal_proof": "First, we find out how many seashells Alice and Bob each collected by the end of the day. Alice collected 7 seashells in the morning and another 8 in the afternoon, so Alice has 7 + 8 = 15 seashells at the end of the day. Bob collected 12 seashells in the morning and lost 5 in the afternoon, so Bob has 12 - 5 = 7 seashells at the end of the day. Therefore, Alice and Bob have 15 + 7 = 22 seashells in total at the end of the day."
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Pre-algebra_624_round0",
+        "informal_statement": "Jack has a certain amount of money in his bank account. He spent $30 on a book and then deposited $50. After these transactions, his account balance is $120. How much money did he initially have in his account?",
+        "informal_proof": "The problem can be modeled by a one-step equation. If we let x represent the initial amount of money in Jack's bank account, then the equation is x - 30 + 50 = 120. Solving this equation will give us the initial amount of money. \n\nFirst, combine like terms to simplify the equation: x + 20 = 120. \n\nThen, subtract 20 from both sides of the equation to isolate x: x = 120 - 20. \n\nSo, x = 100. Jack initially had $100 in his bank account."
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_Basic geometry and measurement_238_round1",
+        "informal_statement": "Assume a rectangle has a length of 4 cm and a width of 2 cm. If we perform a scale transformation that doubles the length and width, what will be the new area of the rectangle?",
+        "informal_proof": "The initial area of the rectangle is calculated by multiplying the length and width, so it is 4 cm * 2 cm = 8 cm\u00b2. \n\nWhen we perform a scale transformation that doubles both the length and width, the new length is 4 cm * 2 = 8 cm and the new width is 2 cm * 2 = 4 cm. \n\nSo, the new area of the rectangle is the new length multiplied by the new width, which is 8 cm * 4 cm = 32 cm\u00b2. \n\nTherefore, the area of the rectangle quadruples (or increases by four times) when both the length and width are doubled."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__theorem_proving_5th_grade_127",
+        "informal_statement": "Given two decimal numbers 0.2 and 0.4, multiply each by the power of ten (10^2), and add the results. What is the final result?",
+        "informal_proof": "First, we multiply each decimal number by the power of ten (10^2). Multiplying 0.2 by 10^2 gives us 20, and multiplying 0.4 by 10^2 gives us 40. Adding these two results gives us 60. So, the final result is 60."
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_2nd_grade_701_round2",
+        "informal_statement": "If a pizza is divided into 4 equal parts and 2 parts are eaten, what fraction of the pizza is left?",
+        "informal_proof": "The total pizza is considered as 1 whole or 4/4 in fractional terms. When 2 parts are eaten, we subtract those 2 parts from the total. So, we start with 4/4 (the whole pizza), and take away 2/4 (the parts that have been eaten). This leaves us with 2/4 or 1/2 of the pizza."
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_Algebra_basics_322_round2",
+        "informal_statement": "In a right-angled triangle, the square of the length of the hypotenuse is equal to the sum of the squares of the lengths of the other two sides. If one side of the triangle measures 3 units and the other side measures 4 units, find the length of the hypotenuse.",
+        "informal_proof": "This is a direct application of the Pythagorean theorem. The theorem states that in a right-angled triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides. Since one side measures 3 units and the other measures 4 units, the length of the hypotenuse can be calculated as the square root of the sum of the squares of 3 and 4. So, the length of the hypotenuse is the square root of (3^2 + 4^2), which is the square root of 25, and hence equals 5 units."
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_Basic geometry and measurement_468_round1",
+        "informal_statement": "Given a cube with side length represented by the linear inequality `2x - 3 > 5`, where `x` is the number of unit blocks that make up the length of one side of the cube, calculate the minimum volume of the cube.",
+        "informal_proof": "Firstly, we can solve the inequality `2x - 3 > 5` to find the smallest value of `x`. By adding `3` to both sides, we get `2x > 8`. Then by dividing both sides by `2`, we get `x > 4`. \n\nSo the smallest integer value that satisfies `x > 4` is `5`. \n\nThe volume of a cube is given by the formula `side_length^3`. Therefore, the minimum volume of the cube is `5^3 = 125` unit cubes."
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Pre-algebra_178_round1",
+        "informal_statement": "John has a book store. He bought a book for $60 and sold it for $90. What is the percentage profit John made on selling the book?",
+        "informal_proof": "The profit that John made from selling the book is $90 (selling price) - $60 (cost price) = $30. \nTo calculate the percentage profit, we use the formula (Profit / Cost Price) * 100. Substituting the given values, we get (30 / 60) * 100 = 50%. So, John made a 50% profit on selling the book."
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_Pre-algebra_467_round1",
+        "informal_statement": "Bob and Alice are business partners. Bob owns 70% of the business, and Alice owns the rest. If the total worth of the business is $200,000, how much is Alice's share?",
+        "informal_proof": "Firstly, it's clear that Bob and Alice together own 100% of the business. Since Bob owns 70%, Alice must own 100% - 70% = 30% of the business. To calculate the value of Alice's share, we need to find 30% of $200,000. The word 'of' in this context means multiplication, so we multiply 30% (or 0.30 in decimal form) by $200,000. So, Alice's share is 0.30 * $200,000 = $60,000."
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_4th_grade_580_round2",
+        "informal_statement": "Tom and Jerry are best friends who love to play video games. One Sunday, they played video games for 4 hours straight. If they played an equal amount of time, how long did each of them play?",
+        "informal_proof": "Since Tom and Jerry played an equal amount of time, we can divide the total time by the number of players to find the time each one played. So, we divide 4 hours by 2 players, which equals 2 hours. Therefore, each of them played for 2 hours."
+    },
+    {
+        "name": "correct_by_msg__ELEM_theorem_proving_1st_grade_639_round1",
+        "informal_statement": "If we have three 4-digit numbers: 1234, 5678, and 3456, and we add the first two numbers together, then subtract the third number from the sum, what is the result?",
+        "informal_proof": "First, we add the first two numbers together: 1234 + 5678 = 6912. \nSecond, we subtract the third number from the sum: 6912 - 3456 = 3456. \nTherefore, the result of the operation is 3456."
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_7th_grade_896_round1",
+        "informal_statement": "John has twice as many apples as Mary. If Mary has 15 apples, then how many apples does John have?",
+        "informal_proof": "If Mary has 15 apples, and John has twice as many apples as Mary, then John has 2 times 15, which equals 30 apples."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__word_problem_8th_grade_78",
+        "informal_statement": "John and Mary are trying to solve the equation x^2 + y^2 = 25. John suggests that x = 3 and y = 4 is a solution to the equation. Mary suggests that x = -3 and y = -4 is also a solution. Are both John and Mary correct?",
+        "informal_proof": "First, let's check John's solution. If we substitute x = 3 and y = 4 into the equation, we get 3^2 + 4^2 = 9 + 16 = 25, which is equal to the right side of the equation. So, John's solution is correct.\nNow, let's check Mary's solution. If we substitute x = -3 and y = -4 into the equation, we get (-3)^2 + (-4)^2 = 9 + 16 = 25, which is also equal to the right side of the equation. So, Mary's solution is also correct."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__HIGH_word_problem_Algebra_1_955",
+        "informal_statement": "Consider the sequence defined by the function f(n) = 3n - 2, for n in the set of positive integers. What is the value of the 10th term in the sequence?",
+        "informal_proof": "To find the 10th term in the sequence, we simply substitute n = 10 into the function f(n) = 3n - 2. Therefore, f(10) = 3*10 - 2 = 28. Hence, the 10th term in the sequence is 28."
+    },
+    {
+        "name": "correct_by_msg__theorem_proving_AP_College_Statistics_123_round1",
+        "informal_statement": "Let's consider two complex numbers z\u2081 = a\u2081 + b\u2081i and z\u2082 = a\u2082 + b\u2082i where a\u2081, b\u2081, a\u2082, b\u2082 are real numbers. The sum of these two complex numbers is z = z\u2081 + z\u2082. Prove that the real part of z equals the sum of the real parts of z\u2081 and z\u2082, and the imaginary part of z equals the sum of the imaginary parts of z\u2081 and z\u2082.",
+        "informal_proof": "A complex number is of the form a + bi, where a is the real part and bi is the imaginary part. When we add two complex numbers, we add the real part to the real part and the imaginary part to the imaginary part. Therefore, if we add z\u2081 and z\u2082, the real part of the result z is a\u2081 + a\u2082 and the imaginary part of the result z is b\u2081 + b\u2082. Hence, the real part of z equals the sum of the real parts of z\u2081 and z\u2082, and the imaginary part of z equals the sum of the imaginary parts of z\u2081 and z\u2082."
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Pre-algebra_601_round2",
+        "informal_statement": "Tom and Jerry are running a race. Tom is running at a speed of 5 miles per hour, while Jerry is running at a speed of 3 miles per hour. If they start running at the same time, how many hours will it take for Tom to be 8 miles ahead of Jerry?",
+        "informal_proof": "First, we need to find the difference in their speeds, which is 5 miles per hour - 3 miles per hour = 2 miles per hour. This means that for every hour they run, Tom will be 2 miles ahead of Jerry. \nNow, we need Tom to be 8 miles ahead of Jerry. \nSince Tom gets 2 miles ahead for every hour, the time it takes for Tom to be 8 miles ahead of Jerry is 8 miles \u00f7 2 miles per hour = 4 hours."
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Basic geometry and measurement_910_round0",
+        "informal_statement": "A cube has a side length of 5 cm. What is the volume of the cube?",
+        "informal_proof": "The volume of a cube is calculated by cubing the length of one of its sides. So, in this case, we take the side length of 5 cm and multiply it by itself twice (i.e., 5 cm * 5 cm * 5 cm), giving us a volume of 125 cubic centimeters."
+    },
+    {
+        "name": "correct_by_msg__HEDU_word_problem_College_Algebra_856_round0",
+        "informal_statement": "Given a linear equation in the form y = mx + c, where m represents the slope and c is the y-intercept. If m = 2 and c = 5, what is the value of y when x = 3?",
+        "informal_proof": "The linear equation is y = 2x + 5. To find the value of y when x = 3, we substitute x = 3 into the equation. This gives us y = 2(3) + 5 = 6 + 5 = 11."
+    },
+    {
+        "name": "correct_by_msg__ELEM_word_problem_4th_grade_647_round2",
+        "informal_statement": "John has 6 boxes of oranges. Each box contains 5 oranges. How many oranges does John have in total?",
+        "informal_proof": "If there are 5 oranges in each box, then the total number of oranges that John has can be found by multiplying the number of boxes by the number of oranges in each box. So, 6 boxes times 5 oranges in each box equals 30 oranges. Therefore, John has 30 oranges in total."
+    },
+    {
+        "name": "correct_by_msg__HEDU_theorem_proving_Linear_algebra_855_round1",
+        "informal_statement": "Given two vectors **v** and **w** in \u211d\u00b3 such that **v** = (v\u2081, v\u2082, v\u2083) and **w** = (w\u2081, w\u2082, w\u2083), prove that the dot product of **v** and **w** is commutative. That is, prove that **v** . **w** = **w** . **v**.",
+        "informal_proof": "The dot product of two vectors **v** and **w** is given by **v** . **w** = v\u2081w\u2081 + v\u2082w\u2082 + v\u2083w\u2083. Similarly, **w** . **v** = w\u2081v\u2081 + w\u2082v\u2082 + w\u2083v\u2083. Because multiplication of real numbers is commutative, we have v\u2081w\u2081 = w\u2081v\u2081, v\u2082w\u2082 = w\u2082v\u2082, and v\u2083w\u2083 = w\u2083v\u2083. Therefore, **v** . **w** = v\u2081w\u2081 + v\u2082w\u2082 + v\u2083w\u2083 = w\u2081v\u2081 + w\u2082v\u2082 + w\u2083v\u2083 = **w** . **v**. Hence, the dot product is commutative."
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Algebra_basics_539_round0",
+        "informal_statement": "Sally has twice as many apples as Jim. If Jim has 5 apples, how many apples does Sally have?",
+        "informal_proof": "Given that Sally has twice as many apples as Jim, and Jim has 5 apples, we can calculate the number of apples Sally has by multiplying the number of apples Jim has by 2. Thus, Sally has 2 * 5 = 10 apples."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__MIDD_word_problem_Algebra_basics_279",
+        "informal_statement": "John has an old toy car that can travel 8 meters in a minute. He also has a new toy car that can travel twice as fast as the old car. If John lets the new car run for x minutes, how far will the new car be able to travel? Write an expression for the distance the new car can travel in terms of x, and then calculate the distance when x equals 10.",
+        "informal_proof": "The new car travels twice as fast as the old car, which travels 8 meters in a minute. So, the new car can travel 2*8=16 meters in a minute. Therefore, if the new car runs for x minutes, it can travel 16*x meters. \n\nIf x equals 10, then the new car can travel 16*10 = 160 meters."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__MIDD_theorem_proving_Algebra_basics_725",
+        "informal_statement": "Prove that if for any real numbers a, b, and c, if a < b and b < c, then a < c.",
+        "informal_proof": "Suppose we are given three real numbers a, b, and c such that a < b and b < c. It follows from the properties of real numbers that if a is less than b, and b is less than c, then a must be less than c. This is because if b is greater than a and less than c, it means that b is somewhere in between a and c on the number line. Therefore, a must be less than c."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__ELEM_theorem_proving_2nd_grade_426",
+        "informal_statement": "If John has 9 apples and he gives 4 apples to his friend, how many apples does John have left?",
+        "informal_proof": "John originally has 9 apples. When he gives 4 of these apples to his friend, he is left with the result of 9 subtracted by 4. This is a subtraction problem within 20, so we can solve it by subtracting 4 from 9 directly, which gives us 5. Thus, John has 5 apples left after giving 4 apples to his friend."
+    },
+    {
+        "name": "correct_by_msg__HIGH_word_problem_Calculus_2_717_round1",
+        "informal_statement": "A boat is moving along a straight line in constant speed. Its speed at time t is given by the differential equation ds/dt=5. If the boat started moving from the origin at t=0, what is its position at t=5?",
+        "informal_proof": "Given the differential equation ds/dt=5, we need to find the integral of this function to get the position function, s(t). \n\nThe integral of the function 5 with respect to t from 0 to 5 is simply 5*t evaluated from t=0 to t=5. \n\nThis gives s(5) = 5*5 - 5*0 = 25.\n\nSo, the boat is at position 25 at time t=5."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__HIGH_word_problem_Statistics_and_probability_612",
+        "informal_statement": "In a bag, there are 4 red balls, 3 blue balls, and 5 green balls. If a ball is picked at random, what is the probability that it is either red or green?",
+        "informal_proof": "The total number of balls in the bag is the sum of the red balls, blue balls, and green balls, which is 4+3+5 = 12. The event that the ball is either red or green contains all the red and green balls, which is 4+5 = 9. So, the probability of picking a red or green ball is the ratio of the number of favorable outcomes (i.e., the ball is either red or green) to the number of all possible outcomes, which is 9/12 = 0.75."
+    },
+    {
+        "name": "correct_by_msg__MIDD_word_problem_Algebra_basics_401_round1",
+        "informal_statement": "John is saving money to buy a new bike which costs $200. He currently has $50 and he can save $30 each week. If x represents the number of weeks, write down an inequality to represent the number of weeks it will take John to have enough money to buy the bike. Solve the inequality to find the minimum number of weeks John needs to save.",
+        "informal_proof": "We can express John's savings as an equation where his initial amount ($50) is added to the money he saves each week ($30 per week * x weeks). This can be written as 50 + 30x. Since John needs at least $200 to buy the bike, we have the inequality: 50 + 30x >= 200. \n\nSolving this inequality, we subtract 50 from both sides to get 30x >= 150. Then, we divide both sides by 30 to solve for x, which gives us x >= 5. Therefore, John needs to save for at least 5 weeks to have enough money to buy the bike."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__ELEM_theorem_proving_1st_grade_641",
+        "informal_statement": "Given a rectangle ABCD with AB = 7 units and BC = 5 units. Find the perimeter of the rectangle.",
+        "informal_proof": "The perimeter of a rectangle is given by the formula 2*(length + width). Here, AB is the length and BC is the width. Therefore, the perimeter is 2*(7 units + 5 units) = 2*12 units = 24 units. So, the perimeter of the rectangle ABCD is 24 units."
+    },
+    {
+        "name": "new_step_formalans_kwgiven__ELEM_theorem_proving_2nd_grade_797",
+        "informal_statement": "If a child has 45 marbles and he buys another 35, and then loses 20, how many marbles does he have left?",
+        "informal_proof": "The child initially has 45 marbles. When he buys another 35, the total number of marbles he has is 45 + 35 = 80. If he then loses 20 marbles, the remaining amount is 80 - 20 = 60. So, the child has 60 marbles left."
+    },
+    {
+        "name": "correct_by_msg__MIDD_theorem_proving_8th_grade_365_round1",
+        "informal_statement": "In a class of 30 students, 10 students play football, 15 students play basketball, and 5 students play both sports. What is the probability that a student picked at random plays either football or basketball?",
+        "informal_proof": "First, to find the number of students who play either football or basketball, we add the number of football players to the number of basketball players and subtract the number of students who play both (as they have been counted twice). \n\nSo, that would be 10 (football players) + 15 (basketball players) - 5 (plays both) = 20 students.\n\nThe probability of an event occurring is given by the formula:\n\n    Probability (P) = Number of favorable outcomes / Total number of outcomes\n    \nHere, the total number of outcomes is the total number of students, which is 30.\n\nAnd the number of favorable outcomes is the number of students who play either football or basketball, which is 20. \n\nSo, the probability that a student picked at random plays either football or basketball is:\n\n    P = 20 / 30 = 2 / 3"
+    }
+]
