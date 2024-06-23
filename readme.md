@@ -7,7 +7,7 @@ Competition Link: [ICML 2024 AI for Math Workshop Challenges](https://sites.goog
 
 ## Overview
 
-This repository contains the code for our champion solution in the Automated Math Reasoning challenges. Our approach excelled in both Track 1-1: AUTOFORMALIZATION and Track 1-2: AUTO-INFORMALIZATION, securing the 1st place in both tracks.
+This repository contains the code for our champion solution in the Automated Math Reasoning challenges. Our approach excelled in both Track 1-1: AUTO-FORMALIZATION and Track 1-2: AUTO-INFORMALIZATION, securing the 1st place in both tracks.
 
 ## Final Results
 
