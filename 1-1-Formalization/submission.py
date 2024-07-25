@@ -1,5 +1,13 @@
 """DO NOT rename this file!"""
 
+'''
+1. 使用LLM根据自然语言的问题和solution，转化为lean3 code
+2. 从训练集中总结经验/insight
+3. 对于测试集的问题，使用RAG，检索出相应的data，作为示例，用于上下文学习
+4. 拼接prompt、示例、问题，输入到LLM中，生成lean3 code
+5. 多角度验证： CRITIC Model: 评估生成的code是否准确、评估生成的代码的语义信息是否match
+6. 多次采样，多次评估，取最好的结果作为code
+'''
 import os
 import re
 import json

@@ -1,0 +1,78 @@
+Based on the examples provided, here are some insights (insight list) for translating informal problems and their solutions into formal solutions using Lean 3:
+
+1. **Import Necessary Libraries**:
+   - Always start by importing any necessary libraries that provide definitions and theorems relevant to the problem domain.
+     ```lean
+     import data.real.basic
+     ```
+
+2. **Define Variables**:
+   - Clearly define all variables used in the problem, specifying their types.
+     ```lean
+     variables (x : ℝ)
+     ```
+
+3. **Formalize Functions and Equations**:
+   - Translate informal functions and equations into Lean definitions.
+     ```lean
+     def R : real × real → real := λ x, 10*x.1^2*x.2 - 5*x.1*x.2^2 + 3*x.1 + 4*x.2
+     ```
+
+4. **Use Lean Tactics for Proofs**:
+   - Use tactics such as `ring`, `simp`, `norm_num`, etc., to prove statements.
+     ```lean
+     theorem factorization : (x - 3) ^ 2 = x ^ 2 - 6 * x + 9 :=
+     begin
+       ring,
+     end
+     ```
+
+5. **Formalize Partial Derivatives**:
+   - When dealing with multivariable functions, define partial derivatives explicitly.
+     ```lean
+     def DpR : real × real → real := λ x, 20*x.1*x.2 - 5*x.2^2 + 3
+     ```
+
+6. **Represent Mathematical Operations**:
+   - Represent operations like matrix multiplication, dot products, and transformations formally.
+     ```lean
+     def new_position := mul_vec transformation original_position
+     ```
+
+7. **Define Linear Equations and Sequences**:
+   - Use Lean to define linear equations and sequences, ensuring that the domain and range are correctly specified.
+     ```lean
+     def f (x : ℕ) : ℕ := 7 + 2 * (x - 1)
+     ```
+
+8. **Prove Statements and Solve Equations**:
+   - Use Lean’s proof mechanisms to verify the correctness of solutions and solve equations.
+     ```lean
+     example : J 4 = M 4 :=
+     begin
+       unfold J,
+       unfold M,
+       norm_num,
+     end
+     ```
+
+9. **Use Evaluation for Concrete Calculations**:
+   - Use the `#eval` command to perform concrete calculations and evaluate expressions.
+     ```lean
+     #eval new_position
+     -- Output: ![8, 18]
+     ```
+
+10. **Formalize Geometric Concepts**:
+    - Translate geometric concepts like areas and dimensions into Lean.
+      ```lean
+      def original_area : ℝ := 8 * 6
+      ```
+
+11. **Utilize Lean’s Built-in Commands**:
+    - Leverage Lean’s built-in commands and tactics to simplify and automate parts of the proof.
+      ```lean
+      apply nat.succ_eq_add_one,
+      ```
+
+These insights can serve as a guide for systematically formalizing mathematical problems and their solutions in Lean 3.

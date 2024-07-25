@@ -1,5 +1,15 @@
 """DO NOT rename this file!"""
 
+'''
+1. 使用LLM根据lean3 code，转化为非形式化的数学问题
+2. 从训练集中总结经验/insight
+3. 对于测试集的问题，使用RAG，检索出相应的data，作为示例，用于上下文学习
+4. 拼接prompt、示例、lean3 code，输入到LLM中，首先，确定年级、题型、概念、知识点、题目情景，
+5. 然后生成问题和solution
+5. 多角度验证： CRITIC Model: 评估生成的数学问题和solution本身是否准确、评估生成的代码的语义信息是否match、方向验证：根据生成的问题，再生成对应的lean3 code，与原始的lean3 code进行比较
+6. 多次采样，多次评估，取最好的结果作为result
+'''
+
 import os
 import re
 import json
